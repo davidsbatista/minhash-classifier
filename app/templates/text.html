@@ -1,0 +1,12 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="text">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.text_area(rows=10,cols=80) }}
+    </p>
+   <input type="submit" value="Process">
+</form>
+{% endblock %}

@@ -1,0 +1,2 @@
+O ministro da Saúde, <PER>Correia de Campos</PER>, elogiou hoje o contributo do <ORG>Centro Hospital do Nordeste</ORG> ( CHNE ) para convencer a União Europeia da credibilidade do novo modelo de gestão empresarial dos hospitais portugueses.
+relation:support(Arg1,Arg2)

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+    function loadXMLDoc()
+    {
+    .... AJAX script goes here ...
+    }
+    </script>
+  <title>Classified sentences</title>
+  </head>
+  <body>
+    {% for sentence in sentences %}
+    <div>
+        <p>{{ sentence[0] }}</p>
+        <b>arg1</b>:{{ sentence[1] }}</br>
+        <b>arg2</b>:{{ sentence[2] }}</br>
+        <b>relationship</b>:{{ sentence[3] }}</br>
+        <button type="button" text="Correct" onclick="loadXMLDoc()" style="width: 60px; height: 20px">Correct</button>
+        <button type="button" text="Correct" onclick="loadXMLDoc()" style="width: 60px; height: 20px">False</button>
+    </div>
+    </br>
+    {% endfor %}
+  </body>
+</html>
