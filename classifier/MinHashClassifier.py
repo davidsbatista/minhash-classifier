@@ -197,6 +197,5 @@ def main():
             for r in relationships:
                 lsh.index(r)
 
-
 if __name__ == "__main__":
     main()
