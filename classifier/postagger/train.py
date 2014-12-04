@@ -38,8 +38,8 @@ def demo(corpus, num_sents):
         #column_types = ['ignore','words','ignore','ignore','pos','ignore']
         #cintil = ConllCorpusReader('/home/dsbatista/cintil/','cintil-fixed.conll',column_types)
         column_types = ['words', 'pos', 'ignore']
-        #cintil = ConllCorpusReader('/home/dsbatista/extract-publico-relationships/pos-tagger','cintil-fixed.conll',column_types)
-        cintil = ConllCorpusReader('/home/dsbatista/Dropbox/pt-relationships/classifier/postagger/datasets', 'cintil-fixed-reduced.conll', column_types)
+        #cintil = ConllCorpusReader('/home/dsbatista/minhash-classifier/postagger','cintil-fixed.conll',column_types)
+        cintil = ConllCorpusReader('/home/dsbatista/minhash-classifier/classifier/postagger/datasets', 'cintil-fixed-reduced.conll', column_types)
         tagged_sents = cintil.tagged_sents()[:num_sents]
 
     else:
