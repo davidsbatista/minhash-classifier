@@ -105,8 +105,6 @@ class LocalitySensitiveHashing:
                     rel_type, rel_id = value[0], value[1]
                     candidates[rel_type].append(rel_id)
 
-        print candidates
-
         # get each candidate full signatures
         # stores candidate and approximate Jaccardi score
         scores = []
@@ -134,7 +132,6 @@ class LocalitySensitiveHashing:
 
         else:
             rel_sorted = sorted(scores, key=itemgetter(2), reverse=True)
-            print rel_sorted
             # consider only the top kNN candidates
             top_k = rel_sorted[:self.kNN]
             output = dict()

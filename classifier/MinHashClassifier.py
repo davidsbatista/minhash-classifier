@@ -12,19 +12,21 @@ from Relationship import Relationship
 from FeatureExtractor import FeatureExtractor
 from LocalitySensitiveHashing import LocalitySensitiveHashing
 
-N_BANDS = 10
-N_SIGS = 100
+N_BANDS = 100
+N_SIGS = 800
 KNN = 7
 USE_REDIS = True
 
 
-def classify_sentences(data_file, extractor):
-    relationships = []
+def classify_sentences(data_file, extractor, lsh):
     f_sentences = codecs.open(data_file, encoding='utf-8')
     for line in f_sentences:
         if len(line) > 1:
             sentence = line.strip()
             rel = Relationship(None, sentence, None)
+
+            if rel.arg1type==None and rel.arg2type==None:
+				continue
 
             # extract features/shingles
             features = extractor.extract_features(rel)
@@ -34,10 +36,11 @@ def classify_sentences(data_file, extractor):
             sigs = MinHash.signature(shingles, N_SIGS)
             rel.sigs = sigs
 
-            relationships.append(rel)
+			# find closest neighbours
+            types = lsh.classify(rel)
+            print rel.sentence.encode("utf8") + '\t' + types.encode("utf8")
 
     f_sentences.close()
-    return relationships
 
 
 def classify_relationship(rel):
@@ -129,7 +132,7 @@ def main():
     if sys.argv[1] == 'true':
 
         print "Loading PoS tagger"
-        model = open('postagger/cintil-reduced-tagset.pkl', "rb")
+        model = open('postagger/datasets/cintil-reduced-tagset.pkl', "rb")
         pos_tagger = pickle.load(model)
         model.close()
 
@@ -139,18 +142,12 @@ def main():
         f_verbs.close()
 
         extractor = FeatureExtractor(pos_tagger, verbs)
+        lsh = LocalitySensitiveHashing(N_BANDS, N_SIGS, KNN, USE_REDIS)
+        
         # read sentences from file
         # create a relationship object
         # extract features/shingles and calculate min-hash sigs
-        relationships = classify_sentences(sys.argv[2], extractor)
-
-        # find the closests neighbours
-        lsh = LocalitySensitiveHashing(N_BANDS, N_SIGS, KNN, USE_REDIS)
-        for r in relationships:
-            types = lsh.classify(r)
-            print "\n"
-            print r.sentence
-            print types
+        classify_sentences(sys.argv[2], extractor, lsh)
 
     ############################
     # INDEX TRAINING INSTANCES #
@@ -176,7 +173,7 @@ def main():
         # load sentences, extract features, calculate min-hash sigs, index in bands
         else:
             print "Loading PoS tagger"
-            model = open('postagger/cintil-reduced-tagset.pkl', "rb")
+            model = open('postagger/datasets/cintil-reduced-tagset.pkl', "rb")
             pos_tagger = pickle.load(model)
             model.close()
 
