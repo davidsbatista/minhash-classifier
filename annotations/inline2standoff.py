@@ -11,6 +11,7 @@ span_id = int(0)
 offset = int(0)
 ent_span = dict()
 
+
 def parseFile(data):
     f = codecs.open(data, encoding='utf-8')
     for line in f:

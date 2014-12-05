@@ -67,8 +67,8 @@ def main():
         # gets the arguments of the relationship and the semantic type
         arg1 = r.arg1.split(":")[1]
         arg2 = r.arg2.split(":")[1]
-        entity1 = entities[arg1]
-        entity2 = entities[arg2]
+        entity1 = entities[arg1.strip()]
+        entity2 = entities[arg2.strip()]
         e1type = entity1.etype
         e2type = entity2.etype
 
@@ -96,7 +96,7 @@ def main():
             ent2_start = sentence.find(entity2.name)
             sentence = sentence[:ent2_start] + '<'+entity2.etype+'>' + entity2.name + '</'+entity2.etype+'>' + sentence[ent2_start+len(entity2.name):]
 
-        print str(id)+'\t'+sentence.strip().encode("utf8")
+        print sentence.strip().encode("utf8")
         if (args_reversed==True):
             print "relation:"+r.rel_type.encode("utf8")+"(Arg2,Arg1)\n"
         else:
