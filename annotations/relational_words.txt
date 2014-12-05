@@ -1,0 +1,112 @@
+# accusation
+#relation: accusation
+#arg1: PER,ORG
+#arg2: PER,ORG
+#words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,questionar
+
+# support
+relation: support
+arg1: PER,ORG
+arg2: PER,ORG
+words: elogiou,concordou,apoiou,enalteceu,elogia,saudou,defendeu,desejou,lovou,aplaudiu,apoia,enalteceu,destacou,elogiando,saudou,agradeceu,felicitou
+
+
+# works-with
+relation: works-with
+arg1: PER
+arg2: PER
+words: parceiro,companheiro,colaborou,trabalhou,colega,aliado,conheceram-se
+
+
+# member-of
+#relation: member-of
+#arg1: PER
+#arg2: ORG
+#words: líder,executivo,parlementar,director,presidente,dirigente,deputado,membro,administrador,co-proprietário,sócio-gerente,pertence,preside,lidera,liderou,CEO,chefe,gerente,aderiu,liderada,cargo,eleito,nomeado,pertencer,presidir,tutelava
+
+
+# hold-shares-of
+relation: holds-shares-of
+arg1: PER
+arg2: ORG
+words: detém,investiu,accções,participação,comprou,investe,detentor
+
+
+# owns
+relation: owns
+arg1: PER
+arg2: ORG
+words: proprietário,patrão,detentor,gerente
+
+
+# lives-in
+relation: lifes-in
+arg1: PER
+arg2: LOC
+words: mora,reside,habita,mudou-se,casa,vivia,residia,radica-se
+
+
+# study-at
+relation: study-at
+arg1: PER
+arg2: ORG
+words: estudou,licenciou-se em,formou-se,doutorou-se,licenciou-se,doutorou,doutorado,estudava,frequentou,diplomou-se,doutor,engenheiro,quimica,engenharia
+
+
+
+
+# located-in
+relation: located-in
+arg1: ORG
+arg2: LOC
+words: localizada,sede,situada,sediada,sedeada,sedeado,situa-se
+
+
+# founded-by
+relation: founded-by
+arg1: ORG
+arg2: PER
+words: fundada,criada,inaugurado
+
+
+# founded-in
+relation: founded-in
+arg1: ORG
+arg2: PER
+words: fundada,criada,inaugurado,construída
+
+
+# partner-with
+relation: partner-with
+arg1:ORG
+arg2:ORG
+words: joint-venture,spin-off,societária
+
+
+# merged-with
+relation: merged-with
+arg1: ORG
+arg2: ORG
+words: fusão,junção,cisão,fundir
+
+
+# owns
+relation: owns
+arg1:ORG
+arg2:ORG
+words: comprou,adquiriu,detentora,adquirida,comprada
+
+
+# hold-shares-of
+relation: holds-shares-of
+arg1: ORG
+arg2: ORG
+words: detém,accções,comprou,participação,injectou,societária
+
+
+
+# located-in
+relation: located-in
+arg1: LOC
+arg2: LOC
+words:capital,cidade,aldeia, localizado, localizada, situada, situado
