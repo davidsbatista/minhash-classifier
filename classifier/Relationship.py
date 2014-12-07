@@ -3,7 +3,7 @@ import re
 
 class Relationship:
 
-    def __init__(self, _id, _sentence=None,  _type=None, ):
+    def __init__(self, _id, _sentence=None,  _type=None):
 
         self.sentence = _sentence
         self.identifier = _id
@@ -20,6 +20,8 @@ class Relationship:
             matches = []
             for m in re.finditer(regex, self.sentence):
                 matches.append(m)
+
+            print matches
 
             for x in range(0, len(matches) - 1):
                 if x == 0:
