@@ -100,7 +100,7 @@ def main():
         if (args_reversed==True):
             print "relation:"+r.rel_type.encode("utf8")+"(Arg2,Arg1)\n"
         else:
-            print "relations:"+r.rel_type.encode("utf8")+"(Arg1,Arg2)\n"
+            print "relation:"+r.rel_type.encode("utf8")+"(Arg1,Arg2)\n"
         id+=1
 
 if __name__ == "__main__":

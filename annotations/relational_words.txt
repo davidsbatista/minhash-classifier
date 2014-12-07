@@ -3,12 +3,14 @@
 #arg1: PER,ORG
 #arg2: PER,ORG
 #words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,questionar
+#Senti-Lex: negativo
 
 # support
 relation: support
 arg1: PER,ORG
 arg2: PER,ORG
 words: elogiou,concordou,apoiou,enalteceu,elogia,saudou,defendeu,desejou,lovou,aplaudiu,apoia,enalteceu,destacou,elogiando,saudou,agradeceu,felicitou
+#Senti-Lex: positivo
 
 
 # works-with
@@ -29,14 +31,14 @@ words: parceiro,companheiro,colaborou,trabalhou,colega,aliado,conheceram-se
 relation: holds-shares-of
 arg1: PER
 arg2: ORG
-words: detém,investiu,accções,participação,comprou,investe,detentor
+words:detém,investiu,ações,acções,participação,comprou,investe,detentor,aquisição,accionista,accionistas,acionista,acionistas,acções,adquiriu,alienada,alienar,alienarem,alienação,detendo,detentora,deter,detida,detinha,detém,maioritária,minoritária 
 
 
 # owns
 relation: owns
 arg1: PER
 arg2: ORG
-words: proprietário,patrão,detentor,gerente
+words: proprietário,patrão,detentor,gerente,aquisição,accionista,accionistas,acionista,acionistas,acções,adquiriu,alienada,alienar,alienarem,alienação,casa-mãe,empresa-mãe,detentora,dono,dona
 
 
 # lives-in
@@ -51,7 +53,8 @@ relation: study-at
 arg1: PER
 arg2: ORG
 words: estudou,licenciou-se em,formou-se,doutorou-se,licenciou-se,doutorou,doutorado,estudava,frequentou,diplomou-se,doutor,engenheiro,quimica,engenharia
-
+licenciada,licenciado,licenciar-se,licenciaram-se,licenciou,matriculou-se,universitária,universitário,dissertação,doutorada,doutorado,doutoramento
+doutoranda,doutorando,doutorar-se,doutorou,diplomado,cursar,cursado,bolseira,bolseiro,licenciatura,mestrado,ingressou,curso
 
 
 
@@ -66,7 +69,7 @@ words: localizada,sede,situada,sediada,sedeada,sedeado,situa-se
 relation: founded-by
 arg1: ORG
 arg2: PER
-words: fundada,criada,inaugurado
+words: fundada,criada,inaugurado,co-fundador,fundador,líder-fundador,presidente-fundador,ex-fundador,membro-fundador,refundador,co-fundador,sócio-fundador,co-fundada
 
 
 # founded-in
@@ -87,14 +90,14 @@ words: joint-venture,spin-off,societária
 relation: merged-with
 arg1: ORG
 arg2: ORG
-words: fusão,junção,cisão,fundir
+words: fusão,junção,cisão,fundir,incorporação,alienação
 
 
 # owns
 relation: owns
 arg1:ORG
 arg2:ORG
-words: comprou,adquiriu,detentora,adquirida,comprada
+words: comprou,adquiriu,detentora,adquirida,comprada,totalidade
 
 
 # hold-shares-of
@@ -102,7 +105,6 @@ relation: holds-shares-of
 arg1: ORG
 arg2: ORG
 words: detém,accções,comprou,participação,injectou,societária
-
 
 
 # located-in
