@@ -25,8 +25,8 @@ def classify_sentences(data_file, extractor, lsh):
             sentence = line.strip()
             rel = Relationship(None, sentence, None)
 
-            if rel.arg1type==None and rel.arg2type==None:
-				continue
+            if rel.arg1type is None and rel.arg2type is None:
+                continue
 
             # extract features/shingles
             features = extractor.extract_features(rel)
@@ -36,7 +36,7 @@ def classify_sentences(data_file, extractor, lsh):
             sigs = MinHash.signature(shingles, N_SIGS)
             rel.sigs = sigs
 
-			# find closest neighbours
+            # find closest neighbours
             types = lsh.classify(rel)
             print rel.sentence.encode("utf8") + '\t' + types.encode("utf8")
 
