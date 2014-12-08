@@ -1,9 +1,9 @@
 # accusation
-#relation: accusation
-#arg1: PER,ORG
-#arg2: PER,ORG
-#words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,questionar
-#Senti-Lex: negativo
+relation: accusation
+arg1: PER,ORG
+arg2: PER,ORG
+words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,questionar
+
 
 # support
 relation: support

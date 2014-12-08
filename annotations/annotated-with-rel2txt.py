@@ -9,7 +9,7 @@ import codecs
 ent = re.compile('<[A-Z]+>[^<]+</[A-Z]+>',re.U)
 
 
-def parseFile(data):
+def parse_file(data):
     f = codecs.open(data, encoding='utf-8')
     for line in f:
         if not len(re.findall(ent,line))>2:
@@ -20,7 +20,7 @@ def parseFile(data):
 
 
 def main():
-    parseFile(sys.argv[1])
+    parse_file(sys.argv[1])
 
 
 if __name__ == "__main__":
