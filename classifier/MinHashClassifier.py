@@ -8,7 +8,7 @@ import codecs
 import pickle
 
 import MinHash
-from Relationship import Relationship
+from Sentence import Sentence, Relationship
 from FeatureExtractor import FeatureExtractor
 from LocalitySensitiveHashing import LocalitySensitiveHashing
 
@@ -19,52 +19,59 @@ USE_REDIS = True
 
 
 def classify_sentences(data_file, extractor, lsh):
+    """
+    receives a file with sentences where entities are identified
+    and for each classifies the existing relationships between the entities
+
+    :param data_file:
+    :param extractor:
+    :param lsh:
+    :return:
+    """
     f_sentences = codecs.open(data_file, encoding='utf-8')
     for line in f_sentences:
         if len(line) > 1:
             sentence = line.strip()
-            rel = Relationship(None, sentence, None)
+            sentence = Sentence(sentence)
+            for rel in sentence.relationships:
+                if rel.arg1type is None and rel.arg2type is None:
+                    continue
+                else:
+                    # extract features/shingles
+                    features = extractor.extract_features(rel)
+                    shingles = features.getvalue().strip().split(' ')
 
-            if rel.arg1type is None and rel.arg2type is None:
-                continue
+                    # calculate min-hash sigs
+                    sigs = MinHash.signature(shingles, N_SIGS)
+                    rel.sigs = sigs
 
-            # extract features/shingles
-            features = extractor.extract_features(rel)
-            shingles = features.getvalue().strip().split(' ')
-
-            # calculate min-hash sigs
-            sigs = MinHash.signature(shingles, N_SIGS)
-            rel.sigs = sigs
-
-            # find closest neighbours
-            types = lsh.classify(rel)
-            print rel.sentence.encode("utf8") + '\t' + types.encode("utf8")
+                    # find closest neighbours
+                    types = lsh.classify(rel)
+                    print rel.sentence.encode("utf8") + '\targ1:'+rel.ent1 + '\targ2:ent2'+rel.ent2 + '\t' + types.encode("utf8")
 
     f_sentences.close()
 
 
-def classify_relationship(rel):
-    lsh = LocalitySensitiveHashing(N_BANDS, N_SIGS, KNN, USE_REDIS)
-    types = lsh.classify(rel)
-    print "\n"
-    print rel.sentence
-    print types
+def load_training_relationships(data_file, extractor):
+    """
 
-
-def load_training_sentences(data_file, extractor):
+    :param data_file:
+    :param extractor:
+    :return:
+    """
     relationships = []
     sentence = None
-    rel_identifier = 0
+    rel_id = 0
     f_sentences = codecs.open(data_file, encoding='utf-8')
     f_features = open('features.txt', 'w')
 
     for line in f_sentences:
-        sys.stdout.write('.')
+        #sys.stdout.write('.')
         if not re.match('^relation', line):
             sentence = line.strip()
         else:
             rel_type = line.strip().split(':')[1]
-            rel = Relationship(rel_identifier, sentence, rel_type)
+            rel = Relationship(sentence, None, None, None, None, None, None, None, rel_type, rel_id)
 
             # extract features/shingles
             features = extractor.extract_features(rel)
@@ -79,9 +86,9 @@ def load_training_sentences(data_file, extractor):
             # calculate min-hash sigs
             sigs = MinHash.signature(shingles, N_SIGS)
             rel.sigs = sigs
-            rel.identifier = rel_identifier
+            rel.identifier = rel_id
 
-            rel_identifier += 1
+            rel_id += 1
             relationships.append(rel)
 
     f_sentences.close()
@@ -93,8 +100,7 @@ def load_training_sentences(data_file, extractor):
 def load_shingles(shingles_file):
     """
     Parses already extracted shingles from a file.
-    File format is: relaltionship_type tab_char and
-    shingles separated by an empty space (\s)
+    File format is: relaltionship_type \t shingle1 shingle2 shingle3 ... shingle_n
     """
     relationships = []
     rel_identifier = 0
@@ -108,7 +114,7 @@ def load_shingles(shingles_file):
         # calculate min-hash sigs
         sigs = MinHash.signature(shingles, N_SIGS)
 
-        rel = Relationship(rel_identifier, None, rel_type)
+        rel = Sentence(rel_identifier, None, rel_type)
         rel.sigs = sigs
         rel.identifier = rel_identifier
 
@@ -172,6 +178,7 @@ def main():
 
         # load sentences, extract features, calculate min-hash sigs, index in bands
         else:
+            """
             print "Loading PoS tagger"
             model = open('postagger/datasets/cintil-reduced-tagset.pkl', "rb")
             pos_tagger = pickle.load(model)
@@ -181,10 +188,12 @@ def main():
             f_verbs = open('verbs/verbs_conj.pkl', "rb")
             verbs = pickle.load(f_verbs)
             f_verbs.close()
+            """
 
-            extractor = FeatureExtractor(pos_tagger, verbs)
+            #extractor = FeatureExtractor(pos_tagger, verbs)
+            extractor = FeatureExtractor(None, None)
             print "Extracting features from training data and calculating min-hash sigs"
-            relationships = load_training_sentences(sys.argv[2], extractor)
+            relationships = load_training_relationships(sys.argv[2], extractor)
             print "\n"
             print "Indexing ", len(relationships), "relationships"
             print "MinHash Signatures: ", N_SIGS
@@ -193,6 +202,7 @@ def main():
             lsh.create()
             for r in relationships:
                 lsh.index(r)
+
 
 if __name__ == "__main__":
     main()
