@@ -9,7 +9,7 @@ from config import N_SIGS
 
 from classifier import MinHash
 from classifier.FeatureExtractor import FeatureExtractor
-from classifier.Relationship import Relationship
+from classifier.Sentence import Sentence
 
 
 @app.route('/')
@@ -55,7 +55,7 @@ def classify():
 
         sentence = form.text_area.data
         print "creating relationship object"
-        rel = Relationship(None, sentence, None)
+        rel = Sentence(None, sentence, None)
 
         print "extrating shingles"
         # extract features/shingles
