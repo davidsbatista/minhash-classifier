@@ -9,15 +9,14 @@ words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,
 relation: support
 arg1: PER,ORG
 arg2: PER,ORG
-words: elogiou,concordou,apoiou,enalteceu,elogia,saudou,defendeu,desejou,lovou,aplaudiu,apoia,enalteceu,destacou,elogiando,saudou,agradeceu,felicitou
-#Senti-Lex: positivo
+words: elogiou,concordou,apoiou,enalteceu,elogia,saudou,defendeu,desejou,lovou,aplaudiu,apoia,enalteceu,destacou,elogiando,saudou,agradeceu,felicitou,corroborou,elogiou
 
 
 # works-with
 relation: works-with
 arg1: PER
 arg2: PER
-words: parceiro,companheiro,colaborou,trabalhou,colega,aliado,conheceram-se
+words: parceiro,companheiro,colaborou,trabalhou,colega,aliado,conheceram-se,parceiros,aliados,companheiros,colegas,coopera
 
 
 # member-of
@@ -42,27 +41,24 @@ words: proprietário,patrão,detentor,gerente,aquisição,accionista,accionistas
 
 
 # lives-in
-relation: lifes-in
+relation: lives-in
 arg1: PER
 arg2: LOC
-words: mora,reside,habita,mudou-se,casa,vivia,residia,radica-se
+words: mora,reside,habita,mudou-se,casa,vivia,residia,radica-se,residência,apartamento,vivenda,complexo,condomínio
 
 
 # study-at
 relation: study-at
 arg1: PER
 arg2: ORG
-words: estudou,licenciou-se em,formou-se,doutorou-se,licenciou-se,doutorou,doutorado,estudava,frequentou,diplomou-se,doutor,engenheiro,quimica,engenharia
-licenciada,licenciado,licenciar-se,licenciaram-se,licenciou,matriculou-se,universitária,universitário,dissertação,doutorada,doutorado,doutoramento
-doutoranda,doutorando,doutorar-se,doutorou,diplomado,cursar,cursado,bolseira,bolseiro,licenciatura,mestrado,ingressou,curso
+words: estudou,licenciou-se em,formou-se,doutorou-se,licenciou-se,doutorou,doutorado,estudava,frequentou,diplomou-se,doutor,engenheiro,quimica,engenharia, licenciada,licenciado,licenciar-se,licenciaram-se,licenciou,matriculou-se,universitária,universitário,dissertação,doutorada,doutorado,doutoramento, doutoranda,doutorando,doutorar-se,doutorou,diplomado,cursar,cursado,bolseira,bolseiro,licenciatura,mestrado,ingressou,curso,frequentava,estudante,aluno,pupilo
 
 
-
-# located-in
-relation: located-in
+# headquarters-in
+relation: headquarters-in
 arg1: ORG
 arg2: LOC
-words: localizada,sede,situada,sediada,sedeada,sedeado,situa-se
+words: localizada,sede,situada,sediada,sedeada,sedeado,situa-se,escritórios,fábrica,complexo
 
 
 # founded-by
@@ -72,25 +68,18 @@ arg2: PER
 words: fundada,criada,inaugurado,co-fundador,fundador,líder-fundador,presidente-fundador,ex-fundador,membro-fundador,refundador,co-fundador,sócio-fundador,co-fundada
 
 
-# founded-in
-relation: founded-in
-arg1: ORG
-arg2: PER
-words: fundada,criada,inaugurado,construída
-
-
 # partner-with
 relation: partner-with
 arg1:ORG
 arg2:ORG
-words: joint-venture,spin-off,societária
+words: joint-venture,spin-off,societária,fundiu
 
 
 # merged-with
 relation: merged-with
 arg1: ORG
 arg2: ORG
-words: fusão,junção,cisão,fundir,incorporação,alienação
+words: fusão,junção,cisão,fundir,incorporação,alienação,fundiu
 
 
 # owns
@@ -108,7 +97,7 @@ words: detém,accções,comprou,participação,injectou,societária
 
 
 # located-in
-relation: located-in
-arg1: LOC
-arg2: LOC
-words:capital,cidade,aldeia, localizado, localizada, situada, situado
+#relation: located-in
+#arg1: LOC
+#arg2: LOC
+#words:capital,cidade,aldeia, localizado, localizada, situada, situado
