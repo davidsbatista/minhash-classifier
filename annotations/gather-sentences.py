@@ -76,7 +76,7 @@ def find_matches(line, relationships, positive=None, negative=None):
             if rel.arg1type in r.args1 and rel.arg2type in r.args2:
                 if len(set(tokens).intersection(set(r.words))) > 0:
                    print r.name.encode("utf8")
-                   print " ".join(r.words).encode("utf8")
+                   #print " ".join(r.words).encode("utf8")
                    print rel.ent1.encode("utf8")
                    print rel.ent2.encode("utf8")
                    print line.encode("utf8")

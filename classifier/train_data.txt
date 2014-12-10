@@ -394,15 +394,6 @@ relation:member-of(Arg1,Arg2)
 <PER>Telmo Correia</PER> foi confrontado com as críticas de <PER>Bernardino Soares</PER>, do PCP, e João Teixeira Lopes, do Bloco de Esquerda ( BE ).
 relation:accuse(Arg2,Arg1)
 
-Telmo Correia foi confrontado com as críticas de <PER>Bernardino Soares</PER>, do <ORG>PCP</ORG>, e João Teixeira Lopes, do Bloco de Esquerda ( BE ).
-relation:member-of(Arg1,Arg2)
-
-Telmo Correia foi confrontado com as críticas de Bernardino Soares, do PCP, e <PER>João Teixeira Lopes</PER>, do <ORG>Bloco de Esquerda</ORG> ( BE ).
-relation:member-of(Arg1,Arg2)
-
-<PER>Telmo Correia</PER> foi confrontado com as críticas de Bernardino Soares, do PCP, e <PER>João Teixeira Lopes</PER>, do Bloco de Esquerda ( BE ).
-relation:accuse(Arg2,Arg1)
-
 A <ORG>Ongoing</ORG>, um accionista de referência da <ORG>PT</ORG>, vai votar contra a venda da participação na brasileira Vivo à Telefónica, na assembleia-geral convocada para 30 de Junho, se a empresa espanhola mantiver a oferta actual.
 relation:hold-shares-of(Arg1,Arg2)
 
@@ -1486,9 +1477,6 @@ relation:member-of(Arg1,Arg2)
 "Quando vamos para um lugar qualquer, levamos tudo connosco", explica <PER>Peter Hallan</PER>, médico da <ORG>International Medical Surgical Responsive Team</ORG>, uma organização sob dependência do governo americano.
 relation:member-of(Arg1,Arg2)
 
-Nascido em 1928 nos Estados Unidos, <PER>Nash</PER> doutorou-se em 1950 pela <ORG>Universidade de Princeton</ORG> com uma tese de apenas 27 páginas que viria revolucionar a área matemática da Teoria dos Jogos, que lida nomeadamente com a formulação matemática dos fenómenos e dos comportamentos económicos.
-relation:studied-at(Arg1,Arg2)
-
 Arouca foi professor de <PER>Sócrates</PER> na cadeira de Inglês Técnico, quando ele frequentou a <ORG>Universidade Independente</ORG> como aluno do curso de Engenharia Civil.
 relation:studied-at(Arg1,Arg2)
 
@@ -1529,9 +1517,6 @@ Para o engenheiro <PER>José Guerra</PER>, da <ORG>SERURB Douro , Serviços Urba
 relation:member-of(Arg1,Arg2)
 
 Nascido no Porto, a 18 de Janeiro de 1915, <PER>Kaúlza de Arriaga</PER> formou-se em engenharia na <ORG>Academia Militar</ORG> e fez a sua formação de chefe militar no Instituto de Altos Estudos Militares, onde frequentou o curso de Estado-Maior e o curso de Altos-Comandos.
-relation:studied-at(Arg1,Arg2)
-
-Nascido no Porto, a 18 de Janeiro de 1915, <PER>Kaúlza de Arriaga</PER> formou-se em engenharia na Academia Militar e fez a sua formação de chefe militar no <ORG>Instituto de Altos Estudos Militares</ORG>, onde frequentou o curso de Estado-Maior e o curso de Altos-Comandos.
 relation:studied-at(Arg1,Arg2)
 
 Casado, com um filho, <PER>Carmona</PER> licenciou-se pela <ORG>Universidade Católica de Caracas</ORG> e pela Universidade Livre de Bruxelas.
@@ -2647,7 +2632,7 @@ relation:member-of(Arg1,Arg2)
 relation:accuse(Arg1,Arg2)
 
 Foi este obstáculo que impediu a fusão entre a <ORG>British Airways</ORG> e a holandesa <ORG>KLM</ORG>, que começou a ser negociada em 1998.
-relation:other(Arg1,Arg2)
+relation:other
 
 A ameaça de bomba foi recebida pelas autoridades na capital do <LOC>Paquistão</LOC>, <PER>Islamabad</PER>.
 relation:located-in(Arg1,Arg2)
@@ -2875,16 +2860,16 @@ A protecção civil indica que além deste incêndio está ainda por circunscrev
 relation:located-in(Arg1,Arg2)
 
 O estado do tempo ainda não justifica o encerramento da <LOC>Ponte 25 de Abril</LOC> e da <LOC>Ponte Vasco da Gama</LOC>.
-relation:other(Arg1,Arg2)
+relation:other
 
 Na ligação entre <LOC>Lisboa</LOC> e o <LOC>Barreiro</LOC>, nos dias úteis serão suprimidas três ligações por dia em cada sentido.
-relation:other(Arg1,Arg2)
+relation:other
 
 Vinte e quatro pessoas morreram e 66 ficaram feridas num duplo ataque suicida cometido nos arredores da capital do <LOC>Paquistão</LOC>, <ORG>Islamabad</ORG>.
 relation:located-in(Arg1,Arg2)
 
 Ainda nos hospitais, no turno da noite, registou-se ainda uma adesão de 90 por cento no <LOC>Hospital Miguel Bombarda</LOC> e no <LOC>Hospital de Aveiro</LOC>.
-relation:other(Arg1,Arg2)
+relation:other
 
 Em <LOC>Aiana de Cima</LOC>, concelho de <LOC>Sesimbra</LOC>, não vive muita gente.
 relation:located-in(Arg1,Arg2)
@@ -2893,7 +2878,7 @@ relation:located-in(Arg1,Arg2)
 relation:member-of(Arg1,Arg2)
 
 `` Não há maneira de predizer qual será o futuro das relações entre a <ORG>Síria</ORG> e os <ORG>EUA</ORG> ''.
-relation:other(Arg1,Arg2)
+relation:other
 
 O ultramaratonista português, que se define como " um corredor de montanha que já conseguiu alguns resultados também em desertos", admite que este desafio é o maior da carreira, mas lembra outro grande feito conseguido em Janeiro último, quando se tornou no homem mais rápido do mundo na ascensão do ponto mais alto do hemisfério sul, o <LOC>Aconcágua</LOC>, na <LOC>Argentina</LOC>.
 relation:located-in(Arg1,Arg2)
@@ -2989,7 +2974,7 @@ Deverá seguir ainda hoje para a sede da <ORG>UA</ORG>, na <LOC>Etiópia</LOC>.
 relation:headquarters-in(Arg1,Arg2)
 
 As entidades reguladoras norte-americanas rejeitaram, em 2001, a fusão entre a <ORG>United Airlines</ORG> e a <ORG>US Airways</ORG>.
-relation:other(Arg1,Arg2)
+relation:other
 
 <PER>Manuela Ferreira Leite</PER> acusa <PER>José Sócrates</PER> de ter " um discurso manipulador" que " minou a confiança de todos os sectores da sociedade portuguesa".
 relation:accuse(Arg1,Arg2)
@@ -3022,10 +3007,10 @@ A prisão ocorreu pouco depois das 7h00 locais em <LOC>Somma Vesuviana</LOC>, no
 relation:located-in(Arg1,Arg2)
 
 Há, contudo, alguns serviços que vão ficar de fora dos aumentos, como tinha prometido o <PER>ministro da Saúde</PER> e como estava inscrito no <MSC>Orçamento do Estado</MSC> para este ano.
-relation:other(Arg1,Arg2)
+relation:other
 
 O avião efectuava a ligação entre <LOC>Cap-Haitien</LOC> e <ORG>Port-de-Paix</ORG>.
-relation:other(Arg1,Arg2)
+relation:other
 
 <PER>Caetano Gomes</PER>, um dos dirigentes da <ORG>Divisão de Trânsito da Câmara Municipal</ORG>, afirmou que a " Radial teve pouco aproveitamento esta manhã, tal como no fim-de-semana".
 relation:member-of(Arg1,Arg2)
@@ -3268,7 +3253,7 @@ Uma das conclusões retiradas da inspecção foi que não há uma ligação e pa
 relation:merged-with(Arg1,Arg2)
 
 Os comerciantes já advertiram que, se o <ORG>Citigroup</ORG> e o <ORG>Bank of America</ORG> tiverem os dois fundos limitados, em seguida, outros bancos podem também precisar de aumentar as suas reservas de capital próprio.
-relation:other(Arg1,Arg2)
+relation:other
 
 O <ORG>banco britânico</ORG> vai ainda adquirir a sede do <ORG>Lehman</ORG> em Nova Iorque.
 relation:owns(Arg1,Arg2)
@@ -3502,7 +3487,7 @@ A firma de Rutan é apoiada pelo co-fundador da <ORG>Microsoft</ORG>, o milioná
 relation:founded-by(Arg1,Arg2)
 
 Tudo começou com a participação de <PER>Luca Rossettini</PER> na <ORG>Building Global Innovators</ORG>, uma competição anual para empresas tecnológicas e inovadoras, organizada em parceria entre o MIT Portugal, o ISCTE, entre outros parceiros, e com um investimento da Caixa Geral de Depósitos.
-relation:holds-shares-of(Arg1,Arg2)
+relation:hold-shares-of(Arg1,Arg2)
 
 O <PER>presidente da FCT</PER>, que trabalhou recentemente com <PER>Graça Carvalho</PER> no âmbito das suas funções como directora-geral do Gabinete de Relações Internacionais da Ciência e do Ensino Superior ( GRICES ), cargo que ocupava desde Dezembro de 2002, sublinhou ainda a importância de a nova ministra ser " uma investigadora de créditos firmados".
 relation:works-with(Arg1,Arg2)
@@ -3517,10 +3502,10 @@ A empresa era dirigida por Ana Simões e António José Morais, engenheiro e doc
 relation:studied-at(Arg1,Arg2)
 
 Antes, os escritórios da <ORG>Warner</ORG> em <LOC>Lisboa</LOC> sofreram do mesmo síndroma, e as decisões passarem a ser partilhadas ao nível da Penísula Ibérica.
-relation:headquarters-at(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 O espaço já estava arrendado pela câmara aos CTT, desde 2002, e o novo contrato foi celebrado entre a autarquia e a <ORG>Demagre</ORG>, uma empresa localizada no paraíso fiscal das <LOC>Ilhas Virgens Britânicas</LOC>.
-relation:headquarters-at(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 O passo seguinte será a construção do HB-SIB, que será ainda maior e vai permitir a <PER>Piccard</PER> e ao companheiro e piloto <PER>Andre Borschberg</PER> fazerem a volta ao mundo.
 relation:works-with(Arg1,Arg2)
@@ -3530,3 +3515,69 @@ relation:works-with(Arg1,Arg2)
 
 A <ORG>Agência Nacional de Gestão do Tesouro</ORG> irlandesa, sediada em <LOC>Dublin</LOC>, vendeu as obrigações a dez anos com uma taxa de juro de 2,967 % e com a procura a exceder a oferta 2,9 vezes.
 relation:headquarters-in(Arg1,Arg2)
+
+Já a operadora móvel brasileira <ORG>Vivo</ORG>, que a <ORG>PT</ORG> detém em conjunto com a Telefónica, terminou o trimestre com 48,874 milhões de clientes, um aumento de mais de dois milhões face ao mesmo período do ano passado.
+relation:owns(Arg2,Arg1)
+
+Nascido em 1928 nos Estados Unidos, <PER>Nash</PER> doutorou-se em 1950 pela <ORG>Universidade de Princeton</ORG> com uma tese de apenas 27 páginas que viria revolucionar a área matemática da Teoria dos Jogos, que lida nomeadamente com a formulação matemática dos fenómenos e dos comportamentos económicos.
+relation:studied-at(Arg1,Arg2)
+
+Segundo Maria Mota, o congresso, que decorre de dois em dois anos, trará a Lisboa grandes figuras do <ORG>HHMI</ORG>, que resultou da fundação criada pelo milionário <PER>Howard Hughes</PER> para melhorar a compreensão dos mecanismos das doença e o desenvolvimento de novas abordagens terapêuticas e de novos testes e ferramentas de diagnóstico.
+relation:founded-by(Arg2,Arg1)
+
+A secretária de Estado norte-americana, <PER>Condoleezza Rice</PER>, agradeceu publicamente à <ORG>Síria</ORG> pela reacção das suas forças de segurança ao ataque levado a cabo hoje contra a embaixada dos Estados Unidos em Damasco, que se saldou na morte de três dos atacantes e de um agente sírio.
+relation:support(Arg1,Arg2)
+
+O acordo surge na véspera da reunião do conselho de ministros da <ORG>ESA</ORG>, realizado em <LOC>Paris</LOC>, na sede da agência espacial.
+relation:headquarters-in(Arg1,Arg2)
+
+Ontem o <ORG>SNTCT</ORG> anunciou que vai processar, por difamação, a <PER>ministra das Finanças</PER>, no âmbito do caso dos certificados de aforro, pois Manuela Ferreira Leite " ofendeu todos os trabalhadores dos CTT ( ... ) numa atitude arrogante, despropositada e demonstradora da sua personalidade".
+relation:accuse(Arg1,Arg2)
+
+A <ORG>TI</ORG> é uma organização não-governamental sedeada em <LOC>Berlim</LOC> que se dedica ao combate à corrupção a nível mundial.
+relation:headquarters-in(Arg1,Arg2)
+
+O dirigente do <ORG>BE</ORG> não poupou críticas ao <ORG>Governo</ORG>, adiantando tratar-se de " uma política economicista de um Governo que não se importa de não dar resposta ao malbaratar de dinheiro em outras áreas".
+relation:accuse(Arg1,Arg2)
+
+A restrição aos movimentos do Presidente da Autoridade Palestiniana será levantada quando ele prender os suspeitos do assassínio do ministro israelita do Turismo que, segundo Israel, vivem em <LOC>Ramallah</LOC>, numa zona muito próxima dos escritórios da <ORG>Autoridade Palestiniana</ORG>.
+relation:headquarters-in(Arg2,Arg1)
+
+Diplomatas de ambos os lados estiveram reunidos ontem à noite em <LOC>Viena</LOC>, sede da <ORG>AIEA</ORG>, a discutir formas de resolver este diferendo, mas não se espera para hoje a apresentação de qualquer proposta de consenso.
+relation:headquarters-in(Arg2,Arg1)
+
+No polígono militar de <LOC>Tancos</LOC> funcionam a <ORG>Escola de Tropas de Pára-quedistas</ORG>, o Comando da Brigada de Acção Rápida e a Escola Prática de Engenharia, com mais de 2000 militares.
+relation:headquarters-in(Arg2,Arg1)
+
+<PER>António José Seguro</PER> discorda da decisão do <PER>Presidente da República</PER> de promulgar o Orçamento do Estado e não pedir fiscalização sucessiva da constitucionalidade.
+relation:accuse(Arg1,Arg2)
+
+O <PER>secretário-geral do PS</PER> manifestou-se esta sexta-feira em desacordo com a decisão do <PER>Presidente da República</PER> de promulgar o Orçamento e adiantou que os socialistas suscitarão a fiscalização sucessiva de duas normas sobre salários e pensões.
+relation:accuse(Arg1,Arg2)
+
+Interrogado sobre a recomendação da Comissão Europeia no sentido de Portugal fazer a curto prazo uma reforma da sua legislação laboral, <PER>Manuel Alegre</PER> manifestou-se de acordo com a posição crítica assumida terça-feira pelo <PER>Presidente da República</PER>.
+relation:support(Arg1,Arg2)
+
+<PER>Paulo Constantino</PER> contraria declarações do <PER>presidente do Instituto da Água</PER> ( Inag ), que referiu que os 20 hm3 de água que Espanha pretende desviar para o Parque Natural de Tablas de Daimiel não terão implicações em Portugal.
+relation:accuse(Arg1,Arg2)
+
+O <ORG>Ruanda</ORG> apoia o principal movimento rebelde da RDC, a <ORG>União Congolesa</ORG> para a Democracia (RCD), desde o início da rebelião, a 2 de Agosto de 1998, contra o regime de Kinshasa.
+relation:support(Arg1,Arg2)
+
+As críticas de <PER>Duarte Machado</PER> são corroboradas pelo presidente da Concelhia do PSD, <PER>Paulo Valdez</PER>, que receia a transformação progressiva da cidade num dormitório de Lisboa, à imagem de outros concelhos como Amadora e Loures.
+relation:support(Arg2,Arg1)
+
+Licenciado em Medicina pela <ORG>Universidade de Lisboa</ORG> em 1983, <PER>Fernando Leal da Costa</PER> está ligado há muito ao Instituto Português de Oncologia ( IPO ) de <LOC>Lisboa</LOC>, onde é Assistente Graduado de Hematologia.
+relation:studied-at(Arg2,Arg1)
+
+<PER>Alberto Nídio Silva</PER> fez mestrado e doutoramento em sociologia infantil na <ORG>Universidade do Minho</ORG>, mas também é já autor da obra " Estudo de caracterização dos recreios escolares com vista à sua requalificação".
+relation:studied-at(Arg1,Arg2)
+
+<PER>Xavier Malcata</PER> é professor catedrático da UCP, com doutoramento pela <ORG>Universidade de Wisconsin</ORG>, ocupando a área da biotecnologia alimentar lugar de destaque no seu currículo.
+relation:studied-at(Arg1,Arg2)
+
+A representante das Nações Unidas para a redução dos riscos de desastres, Margareta Wahlström, disse ontem em <LOC>Nova Iorque</LOC> ( onde está situada a sede da <ORG>ONU</ORG> ) que a Turquia já fez progressos consideráveis a nível da construção na capital, Istambul, mas que há zonas onde dominam edifícios antigos, impreparados para este tipo de catástrofes.
+relation:headquarters-in(Arg2,Arg1)
+
+Através do processo judicial que dará em breve entrada num tribunal da <LOC>Virginia</LOC>, estado onde fica a sede daquela multinacional, a <ORG>EMT</ORG> pretende ser ressarcida dos danos emergentes e lucros cessantes com a retirada da marca madeirense do mercado, confirmou ao PÚBLICO André Luiz Gomes, advogado da empresa.
+relation:headquarters-in(Arg2,Arg1)

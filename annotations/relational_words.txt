@@ -2,7 +2,7 @@
 relation: accusation
 arg1: PER,ORG
 arg2: PER,ORG
-words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,questionar
+words: discordar,critica,processar,desafia,responsabiliza,críticas,acusações,questionar,questionou,desacordo, desacordo, desagrado, desapontamento, desaprovação, descontentamento, desilusão, desprezo
 
 
 # support
