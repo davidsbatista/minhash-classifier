@@ -11,7 +11,7 @@ O vice-presidente do município, <PER>Abdifatah Ibrahim Shaweye</PER>, acusou a 
 relation:accuse(Arg1,Arg2)
 
 O <ORG>AEIE</ORG>, com sede em <LOC>Oviedo</LOC>, intervirá sobre uma capacidade instalada de 2166 megawatts, com uma queima média de 7,5 milhões de toneladas de carvão, prevendo-se que os novos equipamentos estejam operacionais no último trimestre de 2007.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>Fabrizio Cicchitto</PER>, um velho aliado de <PER>Berlusconi</PER>, acusou o antigo primeiro-ministro de ter tomado a decisão sem consultar o partido e denunciou o radicalismo dos que rodeiam Berlusconi.
 relation:accuse(Arg1,Arg2)
@@ -47,7 +47,7 @@ Secretas: <ORG>PCP</ORG> acusa <PER>Miguel Relvas</PER> de "irresponsabilidade".
 relation:accuse(Arg1,Arg2)
 
 Antes, Carvalho da Silva esteve na sede do <ORG>PCP</ORG>, em <LOC>Lisboa</LOC>, onde se reuniu com o líder comunista, Jerónimo de Sousa.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>Assis</PER> abre jornadas do PS com críticas à proposta de revisão constitucional do <ORG>PSD</ORG>.
 relation:accuse(Arg1,Arg2)
@@ -206,7 +206,7 @@ A revisão da lei eleitoral para a Assembleia da República mereceu, igualmente,
 relation:accuse(Arg1,Arg2)
 
 Quando às obras de ampliação da sede da <ORG>Polícia Judiciária ( PJ )</ORG>, em <LOC>Lisboa</LOC>, vão manter-se e podem iniciar-se ainda este ano, disse.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Até ao presidente do grupo, o também presidente do <ORG>Tribunal de Contas</ORG>, <PER>Guilherme d'Oliveira Martins</PER>, se queixou da "lentidão e a forma parcelar com que a administração" estava a fornecer as informações, e avisou que tal situação colocava "em risco o cumprimento da missão" do grupo.
 relation:member-of(Arg2,Arg1)
@@ -247,9 +247,6 @@ relation:member-of(Arg1,Arg2)
 O cabeça de lista da coligação <ORG>Força Portugal</ORG>, <PER>João de Deus Pinheiro</PER>, considerou hoje desapropriada a possibilidade de o Governo decretar "ponte" a 11 de Junho, dois dias antes das eleições europeias, numa alusão às críticas do candidato socialista António Costa.
 relation:member-of(Arg2,Arg1)
 
-Em conferência de imprensa, já depois da apresentação do pedido de esclarecimento, o líder do <ORG>PSD-Açores</ORG>, <PER>Vítor Cruz</PER>, defendeu que o executivo de Carlos César deve prestar informações detalhadas sobre a real situação financeira da região, porque "mais do que o PSD, os açorianos têm o direito de saber o que se está a passar".
-relation:accuse(Arg2,Arg1)
-
 A <ORG>União de Radiodifusão Europeia</ORG>, com sede em <LOC>Genebra</LOC> ( Suíça ), entidade responsável pela organização do concurso, determinou que a Geórgia podia alterar a letra da canção ou então substitui-la por outra.
 relation:headquarters-in(Arg1,Arg2)
 
@@ -284,7 +281,7 @@ O dirigente comunista lançou críticas ao presidente do <ORG>Conselho de Admini
 relation:member-of(Arg2,Arg1)
 
 A <ORG>Bioversity International</ORG>, a organização com sede em <LOC>Roma</LOC> que promoveu este estudo, tem como objectivo o estudo e conservação mundial da diversidade das plantas utilizadas na agricultura.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <ORG>Parlamento Europeu</ORG> critica <ORG>UNITA</ORG> e Governo de Angola.
 relation:accuse(Arg1,Arg2)
@@ -302,7 +299,7 @@ relation:accuse(Arg1,Arg2)
 relation:support(Arg1,Arg2)
 
 Polícia teve de intervir na sede do <ORG>Batasuna</ORG> em <LOC>Pamplona</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Nas respostas que deu ao colectivo de juízes liderado por Nuno Salpico, explicou que, na altura em que a <ORG>PF</ORG> adquiriu a posição no <ORG>BCP</ORG>, desconhecia a existência de "guerras internas" entre Paulo Teixeira Pinto e Jardim Gonçalves.
 relation:hold-shares-of(Arg1,Arg2)
@@ -368,7 +365,7 @@ relation:member-of(Arg1,Arg2)
 relation:member-of(Arg1,Arg2)
 
 "Recebemos uma carta da Coreia do Norte a exigir a retirada dos nossos inspectores", confirmou Peter Rickwood, porta-voz da AIEA, a autoridade de regulamentação e observação nuclear das <ORG>Nações Unidas</ORG>, com sede em <LOC>Viena</LOC>, Áustria.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 O ministro francês da Agricultura, <PER>Dominique Bussereau</PER>, acusou hoje o comissário europeu para o Comércio, <PER>Peter Mandelson</PER>, de assumir um "método de trabalho inaceitável" durante as discussões sobre a Organização Mundial de Comércio ( OMC ), que se realizaram à margem do Fórum Económico Mundial de Davos, na Suíça, que terminou ontem.
 relation:accuse(Arg1,Arg2)
@@ -485,7 +482,7 @@ Sobre o projecto que lhe foi hoje apresentado, iniciado em 2008 pela <ORG>Associ
 relation:support(Arg1,Arg2)
 
 Neste contexto, os dois dirigentes do PND apontaram o "caso caricato de o novo <ORG>Tribunal Administrativo e Fiscal de Loures</ORG> ter sede no <LOC>Restelo</LOC>, no concelho de Lisboa", enquanto que o do Porto "só tem ainda as paredes".
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>Michael Howard</PER>, líder do <ORG>Partido Conservador</ORG>, na oposição, e o nome apontado como sucessor de Blair caso este não sobreviva a esta crise, deverá apresentar-se pessoamente para analisar as conclusões de Hutton.
 relation:member-of(Arg1,Arg2)
@@ -1136,7 +1133,7 @@ A <ORG>Santoro Financial</ORG> s, que pertence a Isabel dos Santos - filha do Ch
 relation:hold-shares-of(Arg1,Arg2)
 
 A <ORG>Orey Inversiones Financieras</ORG>, com sede em <LOC>Bilbao</LOC>, Espanha, é a principal accionista da Orey Antunes, com uma participação de 52 por cento no capital da empresa.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 "O que se passa no <ORG>BCP</ORG> tem de ser tratado no contexto do BCP", declarou o <PER>presidente da EDP</PER>, que detém uma participação de 3,2 por cento do capital do banco.
 relation:hold-shares-of(Arg2,Arg1)
@@ -1319,16 +1316,13 @@ relation:merged-with(Arg1,Arg2)
 relation:accuse(Arg1,Arg2)
 
 A PSP esteve esta sexta-feira nas instalações de <LOC>Lisboa</LOC> da <ORG>Mague SGPS</ORG>, detida pela família Moniz da Maia, para fazer cumprir ( sem resultado ) uma sentença do tribunal arbitral que dá o direito a Domingos Figueiredo, dono da Casa da Graciosa, de recuperar acções da Foi um dia agitado na sede da Mague, em Lisboa, na Rua Castilho.
-relation:located-in(Arg2,Arg1)
+relation:headquarters-in(Arg2,Arg1)
 
 A PSP esteve esta sexta-feira nas instalações de Lisboa da <ORG>Mague SGPS</ORG>, detida pela família <PER>Moniz da Maia</PER>, para fazer cumprir ( sem resultado ) uma sentença do tribunal arbitral que dá o direito a Domingos Figueiredo, dono da Casa da Graciosa, de recuperar acções da Foi um dia agitado na sede da Mague, em Lisboa, na Rua Castilho.
 relation:owns(Arg2,Arg1)
 
 A PSP esteve esta sexta-feira nas instalações de Lisboa da Mague SGPS, detida pela família Moniz da Maia, para fazer cumprir ( sem resultado ) uma sentença do tribunal arbitral que dá o direito a <PER>Domingos Figueiredo</PER>, dono da <ORG>Casa da Graciosa</ORG>, de recuperar acções da Foi um dia agitado na sede da Mague, em Lisboa, na Rua Castilho.
 relation:owns(Arg1,Arg2)
-
-A PSP esteve esta sexta-feira nas instalações de <LOC>Lisboa</LOC> da Mague SGPS, detida pela família Moniz da Maia, para fazer cumprir ( sem resultado ) uma sentença do tribunal arbitral que dá o direito a Domingos Figueiredo, dono da Casa da Graciosa, de recuperar acções da Foi um dia agitado na <LOC>sede da Mague</LOC>, em Lisboa, na Rua Castilho.
-relation:located-in(Arg1,Arg2)
 
 Cinco senadores ( quatro democratas e <PER>John McCain</PER> ) foram acusados de corrupção e investigados pelo <ORG>Comité de Ética do Congresso</ORG> por causa da sua intervenção em favor de Charles Keating - o dono do Lincoln, um dos maiores financiadores políticos de McCain e que acabou por ser condenado a uma pena de prisão.
 relation:accuse(Arg2,Arg1)
@@ -1790,7 +1784,7 @@ Um bombista suicida tomou esta manhã por alvo em grupo de paramilitares sunitas
 relation:located-in(Arg1,Arg2)
 
 Financiado pelo Programa Operacional para o Emprego , Formação e Desenvolvimento Social, o <ORG>FIC</ORG> possui uma estrutura organizativa própria, sedeada no <LOC>Porto</LOC>, e uma rede de parceiros operacionais ( associações empresariais ) nas regiões do norte e do centro do país e institucionais, nomeadamente a Associação rial de Portugal e a Associação Industrial Portuguesa.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Na segunda-feira, Donkey e os seus nove companheiros vão iniciar uma viagem de 36 horas até ao seu novo lar, numa antiga propriedade agrícola perto da cidade de <LOC>Villena</LOC>, junto à <LOC>Serra de Salinas</LOC>, Espanha, transformada no centro de resgate Primadomus.
 relation:located-in(Arg1,Arg2)
@@ -1809,12 +1803,6 @@ relation:accuse(Arg1,Arg2)
 
 O presidente do PSD, Marques Mendes, acusou hoje o Governo de José Sócrates de ter recebido o patrão da <ORG>Microsoft</ORG>, <PER>Bill Gates</PER>, com uma atitude de "subserviência" e com "provincianismo".
 relation:member-of(Arg2,Arg1)
-
-Jerónimo de Sousa fez na tarde desta quinta-feira um forte apelo aos portugueses para que adoptem "as mais variadas formas de luta" contra o "pacto de agressão da Numa conferência de imprensa na sede do <ORG>PCP</ORG>, em <LOC>Lisboa</LOC>, o secretário-geral comunista acusou o Governo de Passos Coelho de estar a impor "mortais sacrifícios sobre os trabalhadores e o povo.
-relation:located-in(Arg1,Arg2)
-
-O secretário-geral da estrutura sindical, <PER>Mário Nogueira</PER>, defendeu que o <ORG>MEC</ORG> não tem competência para avaliar os professores numa prova de 120 minutos, e acusou o ministério de querer livrar-se de milhares de professores contratados, por não ter coragem de atacar interesses instalados nas universidades, "onde os amigos dos responsáveis do MEC continuam a comandar a vida delas".
-relation:accuse(Arg1,Arg2)
 
 Na véspera, <ORG>Israel</ORG> acusou o <ORG>Irão</ORG> por um ataque em Nova Deli que deixou ferida a mulher de um diplomata israelita numa zona movimentada da capital da Índia, e por uma tentativa falhada em Tbilissi, capital da Geórgia.
 relation:accuse(Arg1,Arg2)
@@ -1919,7 +1907,7 @@ O <PER>La Caixa</PER> passou a deter uma participação de 22,797 por cento no <
 relation:hold-shares-of(Arg1,Arg2)
 
 De bata e touca branca e sapatos protegidos com plásticos azuis, Cavaco Silva visitou as várias áreas que compõem a sede da <ORG>Bial</ORG>, nos arredores do <LOC>Porto</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>Luís Filipe Menezes</PER> elogiou a <PER>líder do PSD</PER> pela escolha do primeiro candidato às eleições europeia, Paulo Rangel, mas que deveria retirar ilações dos resultados das eleições legislativas e que os resultadas das autárquicas não podem afastar a derrota verificada.
 relation:support(Arg1,Arg2)
@@ -2240,13 +2228,13 @@ Uma pessoa morreu e, pelo menos, 20 ficaram feridas - entre as quais três polí
 relation:located-in(Arg1,Arg2)
 
 Os inspectores apreenderam ainda material que serve para refinar urânio para ser usado em reactores nucleares ou bombas atómicas, mas nada permite dizer se o urânio foi efectivamente usado ou enriquecido, segundo fontes do jornal americano, que avança ainda que o material descoberto deverá ser enviado no final da semana pelos inspectores para a sede da <ORG>AIEA</ORG> em <LOC>Viena</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Uma estação de televisão estatal russa mostrou hoje a imagem de um homem identificado como um dos terroristas do grupo tchetcheno que manteve sequestradas mais de mil pessoas numa escola da cidade de <LOC>Beslan</LOC>, na <LOC>Ossétia do Norte</LOC>.
 relation:located-in(Arg1,Arg2)
 
 As negociações para obter o acordo de fornecimento de genéricos foram suspensas ontem à noite, tendo sido retomadas esta manhã na sede da <ORG>OMC</ORG>, em <LOC>Genebra</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Os feridos - alguns dos quais sofreram ferimentos considerados graves - foram de imediato transportados para um hospital local, segundo a polícia de <LOC>Incheon</LOC>, a oeste da capital sul-coreana, <LOC>Seul</LOC>.
 relation:located-in(Arg1,Arg2)
@@ -2327,7 +2315,7 @@ Já <PER>Doug Brown</PER>, da <ORG>Alzheimer Society do Reino Unido</ORG>, diz q
 relation:member-of(Arg1,Arg2)
 
 É a competição europeia mais importante e estão nos quartos por mérito próprio", afirmou o português, comentando o resultado do sorteio realizado na sexta-feira na sede da <ORG>UEFA</ORG>, na <LOC>Suíça</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>Ana Portela</PER>, porta-voz da <ORG>CP</ORG> afirmou que a greve dos maquinistas está a ter um " impacto violentíssimo".
 relation:member-of(Arg1,Arg2)
@@ -2336,7 +2324,7 @@ Entre os 11 títulos que terminaram a valorizar, destaque ainda para os três t�
 relation:owns(Arg1,Arg2)
 
 `` Se houver grande adesão podemos chegar hoje às 1500 assinaturas", diz, lembrando que a recolha e o contacto com os militantes do partido serão feitos na sede do <ORG>PSD/Algarve</ORG>, <LOC>Faro</LOC>, entre as 16h e as 23h.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 `` Alguns engenhos explosivos foram colocados pelos nossos operacionais que trabalham nos serviços governamentais de segurança", dizia o " e-mail", assinado por <PER>Jomo Gbomo</PER>, porta-voz do <ORG>MEND</ORG>.
 relation:member-of(Arg1,Arg2)
@@ -2348,7 +2336,7 @@ A fusão entre a <ORG>Transtejo</ORG> e a <ORG>Soflusa</ORG> vai avançar, mas a
 relation:merged-with(Arg1,Arg2)
 
 A reunião dos 55 conselheiros nacionais sociais-democratas, com início marcado para as 15h00, irá decorrer na sede nacional do <ORG>PSD</ORG>, em <LOC>Lisboa</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>Assunção Esteves</PER> é presidente da <ORG>Assembleia da República ( AR</ORG> ).
 relation:member-of(Arg1,Arg2)
@@ -2468,7 +2456,7 @@ Com a fusão entre a <ORG>Zon</ORG> e a <ORG>Optimus</ORG>, tudo indica que a ca
 relation:merged-with(Arg1,Arg2)
 
 A polícia reconheceu que a manifestação, que se pretendia pacífica, foi aproveitada " por alguns círculos políticos" para desestabilizar, uma vez que a sede nacional do <ORG>PRS</ORG>, em <LOC>Bissau</LOC>, foi vandalizada e ficou parcialmente destruída por uma multidão em fúria.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Também <PER>José Luís Arnaut</PER>, que apoiou <PER>Paulo Rangel</PER>, anunciou que não participará " em qualquer processo de elaboração de listas alternativas".
 relation:support(Arg1,Arg2)
@@ -2480,10 +2468,10 @@ relation:accuse(Arg1,Arg2)
 relation:member-of(Arg1,Arg2)
 
 É possível que daqui a dois anos já possamos jantar num restaurante no terraço da antiga sede do <ORG>Banco Nacional Ultramarino</ORG>, na <LOC>Baixa</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Até às 13:00 de hoje, o carro de um dos clientes estava a bloquear a entrada da sede do <ORG>BPP</ORG> na <LOC>Rua de Gondarém</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 Os seis países - responsáveis por metade das emissões de gases com efeito de estufa em todo o mundo -- estão reunidos entre hoje e amanhã em <LOC>Sydney</LOC>, na <LOC>Austrália</LOC>.
 relation:located-in(Arg1,Arg2)
@@ -2498,7 +2486,7 @@ relation:located-in(Arg1,Arg2)
 relation:member-of(Arg1,Arg2)
 
 A assinatura do acordo será acompanhada em directo por videoconferência na sede das <ORG>Nações Unidas</ORG>, em <LOC>Nova Iorque</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <PER>José Núncio</PER>, presidente da <ORG>Federação Nacional de Rega ( Fenareg</ORG> ), dá o alerta: " Em 1989 existiam no continente 650 mil hectares de terras regadas.
 relation:member-of(Arg1,Arg2)
@@ -2521,11 +2509,8 @@ relation:merged-with(Arg1,Arg2)
 No mesmo distrito, está ainda por controlar um incêndio que teve início pelas 12h00, em <LOC>Almofala</LOC>, concelho de <LOC>Figueira de Castelo Rodrigo</LOC>.
 relation:located-in(Arg1,Arg2)
 
-Para a próxima sexta-feira serão organizados mais actos populares semelhantes, para acompanhar e mostrar o apoio às palavras de Abbas na sede da <ORG>ONU</ORG> em <LOC>Nova Iorque</LOC>.
-relation:located-in(Arg1,Arg2)
-
 Neste segundo espaço deverá ficar ainda a sede da <ORG>Fundação António da Mota</ORG>, da <ORG>Mota-Engil</ORG>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 A <ORG>UGT</ORG> e a <ORG>CGTP</ORG> chegaram a acordo para a realização de uma greve geral, em protesto contra as medidas de austeridade.
 relation:support(Arg1,Arg2)
@@ -2553,9 +2538,6 @@ relation:owns(Arg1,Arg2)
 
 <PER>Claire Buchan</PER>, porta-voz da <ORG>Casa Branca</ORG>, confirmou que as autoridades tinham identificado uma caixa de correio em particular.
 relation:member-of(Arg1,Arg2)
-
-Assumiu entretanto novas funções na sede da <ORG>News Corporation</ORG> em <LOC>Nova Iorque</LOC>.
-relation:located-in(Arg1,Arg2)
 
 O <PER>ministro da Saúde</PER> acusou hoje o <ORG>Observatório dos Sistemas de Saúde</ORG> de falta de rigor e de credibilidade, numa reacção ao relatório daquela entidade sobre a acção governativa no último ano.
 relation:accuse(Arg1,Arg2)
@@ -2636,7 +2618,7 @@ A ameaça de bomba foi recebida pelas autoridades na capital do <LOC>Paquistão<
 relation:located-in(Arg1,Arg2)
 
 A negociação está a decorrer entre a empresa portuguesa e a sede do <ORG>grupo Tengelmann</ORG>, na <LOC>Alemanha</LOC>, e, a concretizar-se o negócio, poderá conduzir à introdução da insígnia " Biedronka" ( em português, " Joaninha" ) no território nacional.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 No mesmo distrito, um outro fogo consome uma área florestal de <LOC>Travanca do Monte</LOC>, concelho de <LOC>Amarante</LOC>, desde as 08h30.
 relation:located-in(Arg1,Arg2)
@@ -2714,19 +2696,13 @@ relation:headquarters-in(Arg1,Arg2)
 relation:member-of(Arg1,Arg2)
 
 De âmbito nacional, a AVALER funcionará na sede da <ORG>Valorsul</ORG>, em <LOC>Loures</LOC>.
-relation:located-in(Arg1,Arg2)
-
-O anúncio foi feito esta terça-feira pelo secretário-geral comunista, numa conferência de imprensa na sede do <ORG>PCP</ORG>, em <LOC>Lisboa</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 <ORG>PS</ORG> e <ORG>PSD</ORG> chegaram a acordo para concluir até 25 de Abril a discussão sobre a reforma da lei dos partidos políticos, do financiamento dos partidos e do limite do número de mandatos de cargos públicos.
 relation:support(Arg1,Arg2)
 
-O dirigente social-democrata falava aos jornalistas no final de uma reunião de trabalho que hoje manteve com empresários na sede da <ORG>Associação Industrial do Minho</ORG> em <LOC>Braga</LOC>.
-relation:located-in(Arg1,Arg2)
-
 A espécie é também a protagonista de uma exposição que pode ser visitada até 31 de Julho na sede do <ORG>PNA</ORG>, em <LOC>Vila Real</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 O incêndio em <LOC>Pai Água</LOC>, no <LOC>concelho de Castelo Branco</LOC>, já foi dado como extinto.
 relation:located-in(Arg1,Arg2)
@@ -2735,7 +2711,7 @@ relation:located-in(Arg1,Arg2)
 relation:member-of(Arg1,Arg2)
 
 Pretendiam que os gestores fossem constituídos arguidos e interrogados, além de solicitarem uma busca na sede da <ORG>Ferrostaal</ORG>, em <LOC>Essen</LOC>.
-relation:located-in(Arg1,Arg2)
+relation:headquarters-in(Arg1,Arg2)
 
 O autor dos disparos desta noite contra um grupo de bombeiros que se preparava para combater um incêndio em <LOC>Tintinolho</LOC>, <LOC>Guarda</LOC>, é um cadastrado, tido pelas autoridades como uma pessoa perigosa.
 relation:located-in(Arg1,Arg2)
@@ -2770,9 +2746,6 @@ relation:member-of(Arg1,Arg2)
 A <ORG>Federação Nacional dos Professores ( Fenprof</ORG> ) acusou hoje o <ORG>Ministério da Educação</ORG> de " falta de estratégia" ao decidir encerrar 512 escolas caracterizadas pelo elevado insucesso, alertando para o perigo desta medida agravar a qualidade de vida das crianças.
 relation:accuse(Arg1,Arg2)
 
-O primeiro atentado da campanha desencadeada pelos cinco condenados teve como alvo a sede da <ORG>BBC</ORG> em <LOC>Londres</LOC>, em Março de 2001.
-relation:located-in(Arg1,Arg2)
-
 Além da questão ferroviária, foi também assinado um acordo para a criação de um observatório que análise os restantes transportes que estabelecem a ligação entre <ORG>Portugal</ORG> e <ORG>Espanha</ORG>.
 relation:located-in(Arg1,Arg2)
 
@@ -2790,9 +2763,6 @@ relation:hold-shares-of(Arg1,Arg2)
 
 As perto de 73 famílias que estão alojadas no pavilhão desde a última segunda-feira terão que abandonar obrigatoriamente o recinto, com base num acordo entre a <ORG>Câmara de Loures</ORG> e a <ORG>Junta de Freguesia de S. João da Talha</ORG>.
 relation:support(Arg1,Arg2)
-
-Os clientes estão a preparar igualmente uma manifestação junto à sede do <ORG>Banco de Portugal</ORG>, em <LOC>Lisboa</LOC>.
-relation:located-in(Arg1,Arg2)
 
 A coordenadora da <ORG>Frente Comum</ORG>, <PER>Ana Avoila</PER>, disse hoje que o primeiro dia de negociações do contrato de trabalho em funções públicas reforçou a posição de avançar para a greve, marcada para a primeira semana de Junho.
 relation:founded-by(Arg1,Arg2)
@@ -2827,9 +2797,6 @@ relation:located-in(Arg1,Arg2)
 Os seis bombeiros que hoje morreram num incêndio em <LOC>Famalicão da Serra</LOC>, concelho da <LOC>Guarda</LOC>, foram cercados pelas chamas cerca das 14h10, tendo ficado acabado por falecer no local.
 relation:located-in(Arg1,Arg2)
 
-Quanto maior diversidade genética houver, mais margem de manobra os agricultores têm para produzir variedades que resistam a doenças, pragas de insectos e às alterações climáticas.A <ORG>Bioversity International</ORG>, a organização com sede em <LOC>Roma</LOC> que promoveu este estudo, tem como objectivo o estudo e conservação mundial da diversidade das plantas utilizadas na agricultura.
-relation:located-in(Arg1,Arg2)
-
 Foram espalhados pela cidade de <LOC>Morelia</LOC>, no estado de <PER>Michoácan</PER>.
 relation:located-in(Arg1,Arg2)
 
@@ -2841,9 +2808,6 @@ relation:located-in(Arg1,Arg2)
 
 O português trabalha com o cardeal <PER>Gianfranco Ravasi</PER>, presidente do <ORG>Conselho Pontifico da Cultura</ORG>, e um dos papabile -- religiosos considerados como tendo possibilidades de serem os escolhidos pelos seus pares no conclave que se avizinha.
 relation:member-of(Arg1,Arg2)
-
-Sem adversários na corrida à liderança do partido, Passos é já o vencedor anunciado e deverá, ainda esta noite, fazer declarações aos jornalistas, na sede do <ORG>PSD</ORG>, em <LOC>Lisboa</LOC>.
-relation:located-in(Arg1,Arg2)
 
 O <ORG>CDS-PP</ORG> acusou hoje o <ORG>Governo</ORG> de " falhar por completo" todas as previsões orçamentais, considerando que os dados da execução orçamental agora revelados demonstram " o total descontrole da despesa pública".
 relation:accuse(Arg1,Arg2)
@@ -2932,7 +2896,7 @@ relation:headquarters-in(Arg1,Arg2)
 Dinamizadores da iniciativa esperam 300 inscrições.Prostitutas brasileiras da cidade de <LOC>Belo Horizonte</LOC>, no estado de <LOC>Minas Gerais</LOC> ( sudeste ) vão ter aulas de inglês a partir deste ano, para se prepararem para receber os turistas atraídos pelo Mundial de futebol em 2014.
 relation:located-in(Arg1,Arg2)
 
-O anúncio acaba de ser feito numa cerimónia no edifício sede do <ORG>Grupo BertrandCírculo</ORG>, em <LOC>Lisboa</LOC>.
+O anúncio acaba de ser feito numa cerimónia no edifício sede do <ORG>Grupo Bertrand Círculo</ORG>, em <LOC>Lisboa</LOC>.
 relation:headquarters-in(Arg1,Arg2)
 
 O projecto, que arrancou em Julho de 2013, prevê várias sessões de esclarecimento para a população e particularmente para os proprietários de terrenos, e a primeira decorre nesta quinta-feira às 14h na sede da <ORG>Associação de Beneficiários do Mira</ORG>, em <LOC>Odemira</LOC>.
@@ -2980,12 +2944,6 @@ relation:hold-shares-of(Arg1,Arg2)
 Até às 13h00 de hoje, um carro de um dos clientes estava a bloquear a entrada da sede do <ORG>BPP</ORG>, na <LOC>Rua de Gondarém</LOC>.
 relation:headquarters-in(Arg1,Arg2)
 
-O líder do <ORG>PSD</ORG>, <PER>Durão Barroso</PER>, defendeu hoje que o próximo Governo " deve ser de maioria, em nome do interesse nacional", e manifestou-se confiante na vitória do seu partido nas legislativas de 17 de Março.
-relation:accuse(Arg1,Arg2)
-
-O <PER>presidente da Assicom</PER>, <PER>Jaime Ramos</PER>, defendeu que o sector público não deverá fazer " concorrência desleal ao sector privado" e apelou à definição de " uma política económica e de cooperação externa regional séria, verdadeira e competente".
-relation:accuse(Arg1,Arg2)
-
 Dezasseis pessoas morreram quando um pequeno avião de passageiros caiu hoje perto da cidade de <LOC>Lubango</LOC>, no sul de <LOC>Angola</LOC>.
 relation:located-in(Arg1,Arg2)
 
@@ -3031,9 +2989,6 @@ relation:merged-with(Arg1,Arg2)
 No dia seguinte nascerá uma nova escola, com o mesmo nome e nas mesmas instalações, que será o resultado da fusão da <ORG>Escola Secundária Rainha Santa Isabel</ORG> com a <ORG>Alexandre Herculano</ORG>.
 relation:merged-with(Arg1,Arg2)
 
-Já o líder parlamentar do <ORG>PCP</ORG>, <PER>Bernardino Soares</PER>, defendeu que a lei " está longe de ser a solução milagrosa para acabar com o consumo de tabaco".
-relation:accuse(Arg1,Arg2)
-
 O novo instituto resulta da fusão do <ORG>Instituto Português da Droga e da Toxicodependência ( IPDT</ORG> ) e do <ORG>Serviço de Prevenção e Tratamento da Toxicodependência</ORG>.
 relation:merged-with(Arg1,Arg2)
 
@@ -3054,9 +3009,6 @@ relation:support(Arg1,Arg2)
 
 A <ORG>EDP</ORG> e a <ORG>IPE Águas de Portugal</ORG> chegaram a acordo para a eléctrica portuguesa comprar dez por cento do grupo estatal das águas por 99,7 milhões de euros.
 relation:support(Arg1,Arg2)
-
-O <PER>presidente da Câmara do Porto</PER>, <PER>Nuno Cardoso</PER>, defendeu que a menor diversidade étnica e a sub-urbanidade menos evidente dos concelhos nortenhos se reflectem numa área metropolitana mais equilibrada.
-relation:accuse(Arg1,Arg2)
 
 Mesmo assim, <PER>Luís Lima</PER>, <PER>presidente da APEMIP</PER>, recusa a possibilidade de se falar de um boom no mercado de arrendamento, até porque, " se a procura aumentou significativamente, o mesmo não aconteceu à oferta, pelo menos na mesma percentagem".
 relation:owns(Arg1,Arg2)
@@ -3090,9 +3042,6 @@ relation:headquarters-in(Arg1,Arg2)
 
 <PER>David Neves</PER> manifestou, por outro lado, concordância com as palavras do <PER>ministro do Ambiente</PER> sobre a necessidade de " intensificar as acções inspectivas" às suiniculturas, mas defendeu que a fiscalização deve ser feita também a outros sectores de actividade. ''
 relation:support(Arg1,Arg2)
-
-O <PER>Presidente da República</PER>, <PER>Cavaco Silva</PER>, defendeu que à consolidação orçamental se deve juntar elementos de crescimento económico vindos do investimento privado e de uma " redução menos brutal do consumo interno".
-relation:accuse(Arg1,Arg2)
 
 O <ORG>Estado</ORG> é o maior accionista da <ORG>Inapa</ORG>, com uma posição de 32,7 %, através da Parpública, estando esta participação há muito na lista de reprivatizações.
 relation:hold-shares-of(Arg1,Arg2)
@@ -3217,9 +3166,6 @@ relation:accuse(Arg1,Arg2)
 O <PER>ministro da Economia</PER>, <PER>Jorge Remes Lenicov</PER>, anunciou que 1,4 pesos comprariam a partir de agora um dólar, o que significa uma desvalorização de quase 30 por cento.
 relation:support(Arg1,Arg2)
 
-O líder do <ORG>CDS-PP</ORG>, <PER>Paulo Portas</PER>, defendeu hoje a extinção de pelo menos metade das empresas municipais " que existem e não são necessárias", e criticou o " descontrolo" do endividamento das autarquias.
-relation:accuse(Arg1,Arg2)
-
 No sector da educação, <PER>Paulo Rangel</PER> criticou o <ORG>Governo</ORG> por reduzir os problemas do ensino à avaliação de professores e defendeu introdução de um modelo educativo " totalmente novo".
 relation:accuse(Arg1,Arg2)
 
@@ -3233,9 +3179,6 @@ O cumprimento total da greve está dependente do resultado das negociações, qu
 relation:merged-with(Arg1,Arg2)
 
 Então, o <PER>presidente da Associação de Praças da Armada</PER> acusou a <ORG>Marinha</ORG> de ter convocado exercícios navais para 13 de Setembro, dia para o qual estava marcada a manifestação, como forma de limitar a adesão ao protesto.
-relation:accuse(Arg1,Arg2)
-
-O especialista, docente de Ética e <PER>Bioética</PER> na <LOC>Faculdade de Medicina da Universidade do Porto</LOC>, defendeu em declarações à rádio que, " relativamente aos embriões obtidos por clonagem, toda a argumentação que é apresentada no livro", e que " é um livro neutro, que não tira conclusões", ressalvou, " é no sentido de que a clonagem deve ser proibida porque não tem qualquer finalidade benéfica para ninguém."
 relation:accuse(Arg1,Arg2)
 
 Uma das conclusões retiradas da inspecção foi que não há uma ligação e partilha informática de dados entre a <ORG>Saúde</ORG> e a <ORG>Segurança Social</ORG>.
@@ -3264,9 +3207,6 @@ relation:owns(Arg1,Arg2)
 
 O <PER>ministro da Agricultura britânico</PER>, <PER>Nick Brown</PER>, anunciou que vai ser realizado, " dentro de uma semana ou duas", o levantamento parcial das restrições impostas na sequência da epidemia de febre aftosa que afecta o país.
 relation:support(Arg1,Arg2)
-
-Por sua vez o <PER>presidente da ACSDS</PER>, <PER>Francisco Carriço</PER>, defendeu que o sistema deveria funcionar " 24 horas por dia", mas, principalmente, durante a noite.
-relation:accuse(Arg1,Arg2)
 
 As estimativas feitas pela direcção da companhia e pelos sindicatos indicam que vão ser dispensadas cerca de dez mil pessoas na hipótese de uma fusão da <ORG>Swissair</ORG> com a <ORG>Crossair</ORG>, mas se este cenário falhar pelo menos 30 mil pessoas ou até 50 mil poderão enfrentar o desemprego.
 relation:merged-with(Arg1,Arg2)
@@ -3565,9 +3505,6 @@ relation:studied-at(Arg1,Arg2)
 <PER>Xavier Malcata</PER> é professor catedrático da UCP, com doutoramento pela <ORG>Universidade de Wisconsin</ORG>, ocupando a área da biotecnologia alimentar lugar de destaque no seu currículo.
 relation:studied-at(Arg1,Arg2)
 
-A representante das Nações Unidas para a redução dos riscos de desastres, Margareta Wahlström, disse ontem em <LOC>Nova Iorque</LOC> ( onde está situada a sede da <ORG>ONU</ORG> ) que a Turquia já fez progressos consideráveis a nível da construção na capital, Istambul, mas que há zonas onde dominam edifícios antigos, impreparados para este tipo de catástrofes.
-relation:headquarters-in(Arg2,Arg1)
-
 Através do processo judicial que dará em breve entrada num tribunal da <LOC>Virginia</LOC>, estado onde fica a sede daquela multinacional, a <ORG>EMT</ORG> pretende ser ressarcida dos danos emergentes e lucros cessantes com a retirada da marca madeirense do mercado, confirmou ao PÚBLICO André Luiz Gomes, advogado da empresa.
 relation:headquarters-in(Arg2,Arg1)
 
@@ -3576,3 +3513,18 @@ relation:accuse(Arg1,Arg2)
 
 O deputado socialista e ex-director do jornal " Público" <PER>Vicente Jorge Silva</PER> manifestou o seu " veemente desacordo" com as posições de <PER>Mário Soares</PER> sobre a Al-Qaeda, após lembrar que foi autor de um voto de protesto na Assembleia da República `` contra declarações insultuosas proferidas pelo porta-voz do CDS-PP, Pires de Lima '', em relação a Soares.
 relation:accuse(Arg1,Arg2)
+
+A compra de acções da <ORG>Cimpor</ORG> pela <ORG>CGD</ORG> ao empresário Manuel Fino e o aumento do desemprego dominaram ontem o debate quinzenal com o primeiro-ministro.
+relation:hold-shares-of(Arg2,Arg1)
+
+O banco <PER>Crédit Suisse</PER> voltou a deter mais de 2 % do capital da <ORG>Impresa</ORG>, depois de comprar 2.903.934 acções do grupo liderado por Francisco Balsemão, onde já chegou a ter 3,95 % do capital.
+relation:hold-shares-of(Arg1,Arg2)
+
+Já em 2005, a <ORG>CNOOC</ORG> tinha comprado 17 por cento das acções da companhia petrolífera <OGR>MEG Energy</ORG>, igualmente sediada no Canadá.
+relation:hold-shares-of(Arg1,Arg2)
+
+O médico <PER>May Griffith</PER> colaborou neste estudo com o cirurgião sueco <PER>Per Fagerholm</PER>, da Universidade de Linköping, onde se realizaram as intervenções cirúrgicas.
+relation:works-with(Arg1,Arg2)
+
+O novo Presidente do Egipto, <PER>Mohamed Morsi</PER>, apoiado pela <ORG>Irmandade Muçulmana</ORG>, apelou à unidade nacional, após a vitória nas presidenciais.
+relation:support(Arg2,Arg1)
