@@ -2205,8 +2205,6 @@ relation:support(Arg1,Arg2)
 
 <PER>António Cluny</PER> licenciou-se pela <ORG>Faculdade de Direito de Lisboa</ORG> em 1977 e é procurador-geral-adjunto desde 1998, desempenhando funções no Tribunal de Contas.
 relation:studied-at(Arg1,Arg2)
-<ORG>Liga dos Bombeiros Portugueses</ORG<ORG>Governo</ORG>iga dos Bombeiros Portugueses</ORG>
-relation:accuse(Arg1,Arg2)
 
 Em vigilância está o incêndio em <LOC>Tornada</LOC> ( <LOC>Caldas da Rainha</LOC> ).
 relation:located-in(Arg1,Arg2)
@@ -2712,9 +2710,6 @@ relation:support(Arg1,Arg2)
 Ao terreno chegou já uma equipa portuguesa, enviada a pedido das autoridades galegas, que inclui 66 pessoas e 19 viaturas, que partiram ao início da noite de ontem da sede do <ORG>Serviço Nacional de Bombeiros e Protecção Civil ( SNBPC )</ORG> em <LOC>Carnaxide</LOC>.
 relation:headquarters-in(Arg1,Arg2)
 
-<PER>Assis</PER<ORG>PSD</ORG>ER>Assis</PER>
-relation:accuse(Arg1,Arg2)
-
 <PER>Manuel João Ramos</PER>, dirigente da <ORG>Associação</ORG>, referiu, sem precisar a localização, que " cinco radares estão avariados desde Abril".
 relation:member-of(Arg1,Arg2)
 
@@ -2925,9 +2920,6 @@ relation:member-of(Arg2,Arg1)
 Anteriormente, o chefe das operações da <ORG>BP</ORG>, <PER>Doug Suttles</PER>, disse que a cúpula de confinamento deverá capturar até 90 por cento do crude.
 relation:member-of(Arg2,Arg1)
 
-<ORG>PCP</ORG<LOC>Lisboa</LOC>PCP</ORG>
-relation:headquarters-in(Arg1,Arg2)
-
 Hoje de manhã, um suicida palestiniano detonou uma bomba num autocarro na cidade de <LOC>Afulaon</LOC>, no norte de <LOC>Israel</LOC>, matando um israelita e ferindo cinco.A explosão aconteceu na estação central de autocarros da cidade que às primeiras horas da manhã estava cheia de pessoas.
 relation:located-in(Arg1,Arg2)
 
@@ -3119,9 +3111,6 @@ relation:support(Arg1,Arg2)
 
 <PER>Vieira da Silva</PER> acusou o <ORG>Governo</ORG> de estar a tomar uma " opção errada" que " coloca problemas no domínio do emprego".
 relation:accuse(Arg1,Arg2)
-
-Houve ainda outras duas cotadas com um crescimento acima dos 3 %, a <ORG>Brisa</ORG> e a <ORG>Galp</ORG>.
-relation:merged-with(Arg1,Arg2)
 
 José Policarpo, mostrando-se confiante numa " paz definitiva" para aquele país depois da assinatura do memorando de cessar-fogo, na passada quinta-feira, entre a <ORG>UNITA</ORG> e o <ORG>Governo</ORG>.
 relation:merged-with(Arg1,Arg2)
@@ -3581,3 +3570,9 @@ relation:headquarters-in(Arg2,Arg1)
 
 Através do processo judicial que dará em breve entrada num tribunal da <LOC>Virginia</LOC>, estado onde fica a sede daquela multinacional, a <ORG>EMT</ORG> pretende ser ressarcida dos danos emergentes e lucros cessantes com a retirada da marca madeirense do mercado, confirmou ao PÚBLICO André Luiz Gomes, advogado da empresa.
 relation:headquarters-in(Arg2,Arg1)
+
+Em declarações ao Rádio Clube, <PER>Rangel</PER> diz mesmo que <PER>Sócrates</PER> está a ter um comportamento de adolescente, em referência às palavras do chefe de Governo durante o último debate quinzenal na Assembleia da República sobre o porta-voz de Cavaco Silva.
+relation:accuse(Arg1,Arg2)
+
+O deputado socialista e ex-director do jornal " Público" <PER>Vicente Jorge Silva</PER> manifestou o seu " veemente desacordo" com as posições de <PER>Mário Soares</PER> sobre a Al-Qaeda, após lembrar que foi autor de um voto de protesto na Assembleia da República `` contra declarações insultuosas proferidas pelo porta-voz do CDS-PP, Pires de Lima '', em relação a Soares.
+relation:accuse(Arg1,Arg2)

@@ -2,6 +2,7 @@
 
 import StringIO
 import re
+import sys
 
 from nltk import ngrams
 from nltk.corpus import stopwords
@@ -29,9 +30,13 @@ class FeatureExtractor:
         features = StringIO.StringIO()
 
         # calculate the size of each context, i.e., the number of tokens
-        before_tokens = re.findall(self.TOKENIZER, rel.before, flags=re.UNICODE)
-        between_tokens = re.findall(self.TOKENIZER, rel.between, flags=re.UNICODE)
-        after_tokens = re.findall(self.TOKENIZER, rel.after, flags=re.UNICODE)
+        try:
+            before_tokens = re.findall(self.TOKENIZER, rel.before, flags=re.UNICODE)
+            between_tokens = re.findall(self.TOKENIZER, rel.between, flags=re.UNICODE)
+            after_tokens = re.findall(self.TOKENIZER, rel.after, flags=re.UNICODE)
+        except TypeError:
+			print rel.sentence
+			sys.exit(0) 
 
         # conside only a window of size 'tokens_window' tokens
         before_tokens = before_tokens[0 - self.CONTEXT_WINDOW:]

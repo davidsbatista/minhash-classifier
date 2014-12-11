@@ -114,7 +114,7 @@ def load_shingles(shingles_file):
         # calculate min-hash sigs
         sigs = MinHash.signature(shingles, N_SIGS)
 
-        rel = Sentence(rel_identifier, None, rel_type)
+        rel = Relationship(rel_identifier, None, rel_type)
         rel.sigs = sigs
         rel.identifier = rel_identifier
 
@@ -178,7 +178,6 @@ def main():
 
         # load sentences, extract features, calculate min-hash sigs, index in bands
         else:
-            """
             print "Loading PoS tagger"
             model = open('postagger/datasets/cintil-reduced-tagset.pkl', "rb")
             pos_tagger = pickle.load(model)
@@ -188,7 +187,6 @@ def main():
             f_verbs = open('verbs/verbs_conj.pkl', "rb")
             verbs = pickle.load(f_verbs)
             f_verbs.close()
-            """
 
             #extractor = FeatureExtractor(pos_tagger, verbs)
             extractor = FeatureExtractor(None, None)
