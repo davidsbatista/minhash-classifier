@@ -47,7 +47,7 @@ def classify_sentences(data_file, extractor, lsh):
 
                     # find closest neighbours
                     types = lsh.classify(rel)
-                    print rel.sentence.encode("utf8") + '\targ1:'+rel.ent1 + '\targ2:ent2'+rel.ent2 + '\t' + types.encode("utf8")
+                    print rel.sentence.encode("utf8") + '\targ1:'+rel.ent1.encode("utf8") + '\targ2:ent2'+rel.ent2.encode("utf8") + '\t' + types.encode("utf8")
 
     f_sentences.close()
 
@@ -114,12 +114,12 @@ def load_shingles(shingles_file):
         # calculate min-hash sigs
         sigs = MinHash.signature(shingles, N_SIGS)
 
-        rel = Relationship(rel_identifier, None, rel_type)
+        rel = Relationship(None, None, None, None, None, None, None, None, rel_type, rel_identifier)
         rel.sigs = sigs
         rel.identifier = rel_identifier
-
         relationships.append(rel)
         rel_identifier += 1
+    
     f_shingles.close()
 
     return relationships
@@ -188,8 +188,8 @@ def main():
             verbs = pickle.load(f_verbs)
             f_verbs.close()
 
-            #extractor = FeatureExtractor(pos_tagger, verbs)
-            extractor = FeatureExtractor(None, None)
+            extractor = FeatureExtractor(pos_tagger, verbs)
+            #extractor = FeatureExtractor(None, None)
             print "Extracting features from training data and calculating min-hash sigs"
             relationships = load_training_relationships(sys.argv[2], extractor)
             print "\n"

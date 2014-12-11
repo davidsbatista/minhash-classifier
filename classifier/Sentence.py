@@ -19,7 +19,7 @@ class Relationship:
         self.arg2type = _arg2type
         self.sigs = None
 
-        if _before is None and _between is None and _after is None:
+        if _before is None and _between is None and _after is None and _sentence is not None:
             matches = []
             for m in re.finditer(regex, self.sentence):
                 matches.append(m)

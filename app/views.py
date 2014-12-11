@@ -4,6 +4,7 @@ from flask import render_template, redirect, flash
 from forms import TextForm
 
 from app import app, verbs, pos_tagger, LocalitySensitiveHashing
+#from app import app, LocalitySensitiveHashing
 from app import app, lsh
 from config import N_SIGS
 
@@ -55,27 +56,27 @@ def classify():
 
         sentence = form.text_area.data
         print "creating relationship object"
-        rel = Sentence(None, sentence, None)
+        sentence = Sentence(sentence)
 
         print "extrating shingles"
         # extract features/shingles
         extractor = FeatureExtractor(pos_tagger, verbs)
-        #extractor = FeatureExtractor(None, None)
-        features = extractor.extract_features(rel)
-        shingles = features.getvalue().strip().split(' ')
+        #extractor = FeatureExtractor(None,None)
+        for rel in sentence.relationships:
+            features = extractor.extract_features(rel)
+            shingles = features.getvalue().strip().split(' ')
 
-        print shingles
+            print shingles
 
-        print "calculating min-hash sigs"
-        # calculate min-hash sigs
-        sigs = MinHash.signature(shingles, N_SIGS)
-        rel.sigs = sigs
+            print "calculating min-hash sigs"
+            # calculate min-hash sigs
+            sigs = MinHash.signature(shingles, N_SIGS)
+            rel.sigs = sigs
 
-        print "classifying"
-        rel_type = lsh.classify(rel)
+            print "classifying"
+            rel_type = lsh.classify(rel)
 
-        print "classified as :", rel_type
-
-        return render_template('classified.html', rel_type=rel_type, sentence=sentence)
+            print "classified as :", rel_type
+            return render_template('classified.html', rel_type=rel_type, relationship=rel)
 
     return render_template('text.html', title='Extract Relationships', form=form)

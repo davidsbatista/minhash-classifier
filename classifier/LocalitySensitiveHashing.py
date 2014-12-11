@@ -67,10 +67,7 @@ class LocalitySensitiveHashing:
         elif self.USE_REDIS is True:
             for i in range(0, len(chunked)):
                 sorted_chunk = numpy.sort(chunked[i])
-                # TODO, redis_i, ..., redis_n
-                # .set(tuple(sorted_chunk)
                 self.bands[i].set(tuple(sorted_chunk), (relationship.rel_type, relationship.identifier))
-                #self.redis_connection.set(tuple(sorted_chunk), (relationship.rel_type, relationship.identifier))
 
             # save the minh-hash signatures of the relationship
             # allows for real Jaccardi calculation in classication
