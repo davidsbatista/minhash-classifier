@@ -4,7 +4,7 @@
 import sys
 import re
 import codecs
-from Sentence import Sentence
+
 
 tokenizer =  r'\w+(?:-\w+)+|\d+(?:[:|/]\d+)+|\d+(?:[.]?[oaºª°])+|\w+\'\w+|\d+(?:[,|.]\d+)*\%?|[\w+\.-]+@[\w\.-]+|https?://[^\s]+|\w+'
 CONTEXT_WINDOW = 2
@@ -53,7 +53,7 @@ def read_seed_words(data):
 
 
 def find_matches(line, relationships, positive=None, negative=None):
-    sentence = Sentence(line)
+    sentence = sentence(line)
 
     for rel in sentence.relationships:
         # tokenize words in bef,bet,aft
