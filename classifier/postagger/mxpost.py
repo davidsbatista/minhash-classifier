@@ -46,6 +46,7 @@ from collections import defaultdict
 from nltk import TaggerI, FreqDist, untag, config_megam
 from nltk.classify.maxent import MaxentClassifier
 from nltk.corpus.reader.conll import ConllCorpusReader
+from sklearn.cross_validation import KFold
 
 config_megam('/home/dsbatista/megam_i686.opt')
 
@@ -436,7 +437,16 @@ class MaxentPosTagger(TaggerI):
                 print tag,':\t'+str(correct_tags[tag]/float(total_tags[tag]))
 
 
-def demo(corpus, num_sents):
+def demo(corpus):
+
+    #TODO:
+    # 1. treinar um modelo com as tags originais do CINTIL
+    # 2. com tags reduzidas mantendo os verbos no passado
+    # para cada modelo, fazer:
+    #   5-fold
+    #   medir accuracy por tag
+
+
     """
     Loads a few sentences from the Brown corpus or the Wall Street Journal
     corpus, trains them, tests the tagger's accuracy and tags an unseen
@@ -448,7 +458,7 @@ def demo(corpus, num_sents):
     @type num_sents: C{int}
     @param num_sents: Number of sentences to load from a corpus. Use a small
     number, as training might take a while.
-    """
+
     if corpus.lower() == "brown":
         from nltk.corpus import brown
         tagged_sents = brown.tagged_sents()[:num_sents]
@@ -460,26 +470,46 @@ def demo(corpus, num_sents):
     elif corpus.lower() == "floresta":
         from nltk.corpus import floresta
         tagged_sents = floresta.tagged_sents()[:num_sents]
+    """
+    print "Loading CINTIL"
+    #cintil = ConllCorpusReader('/home/dsbatista/cintil/','cintil-fixed.conll',column_types)
+    column_types = ['words', 'pos', 'ignore']
+    column_types = ['words', 'pos', 'ignore']
+    #column_types = ['ignore', 'words', 'ignore', 'ignore', 'pos', 'ignore']
+    directory = "/home/dsbatista/PycharmProjects/minhash-classifier/classifier/postagger/datasets"
+    cintil = ConllCorpusReader(directory, 'cintil-newtags.txt', column_types)
 
-    elif corpus.lower() == "cintil":
-        print "Loading CINTIL"
-        #column_types = ['ignore','words','ignore','ignore','pos','ignore']
-        #cintil = ConllCorpusReader('/home/dsbatista/cintil/','cintil-fixed.conll',column_types)
-        column_types = ['words','pos','ignore']
-        #cintil = ConllCorpusReader('/home/dsbatista/extract-publico-relationships/pos-tagger','cintil-fixed.conll',column_types)
-        cintil = ConllCorpusReader('/home/dsbatista/extract-publico-relationships/pos-tagger','cintil-fixed-reduced.conll',column_types)
-        tagged_sents = cintil.tagged_sents()[:num_sents]
+    print len(cintil.tagged_sents())
 
-    else:
-        print "Please load either the 'brown' or the 'treebank' corpus."
+    """
+    kf = KFold(len(cintil.tagged_sents()), 5)
 
-    size = int(len(tagged_sents) * 0.1)
+    fold = 1
+    for train_index, test_index in kf:
+        print "\nFOLD", fold
+        train = []
+        train_label = []
+        test = []
+        test_label = []
+        test_ids = []
+
+        print train_index
+        print test_index
+
+        for index in train_index:
+            train.append(samples_features[index])
+            train_label.append(sample_class[index])
+
+        for index in test_index:
+            test.append(samples_features[index])
+            test_label.append(sample_class[index])
+            test_ids.append(index)
 
     train_sents, test_sents = tagged_sents[size:], tagged_sents[:size]
     maxent_tagger = MaxentPosTagger()
     maxent_tagger.train(train_sents)
-
     maxent_tagger.evaluate(test_sents)
+    """
 
     """
     print "tagger accuracy (test %i sentences, after training %i):" % \
@@ -491,13 +521,13 @@ def demo(corpus, num_sents):
     print maxent_tagger.classifier.show_most_informative_features(40)
     """
 
-    fModel = open('test.pkl',"wb")
+    """
+    fModel = open('test.pkl', "wb")
     pickle.dump(maxent_tagger, fModel,1)
     fModel.close()
-
-
+    """
 
 if __name__ == '__main__':
-    demo("cintil", 1000000)
+    demo("cintil")
 
 
