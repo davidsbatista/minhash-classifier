@@ -40,13 +40,10 @@ methods is described below.
 
 import time
 import re
-import pickle
 
 from collections import defaultdict
 from nltk import TaggerI, FreqDist, untag, config_megam
 from nltk.classify.maxent import MaxentClassifier
-from nltk.corpus.reader.conll import ConllCorpusReader
-from sklearn.cross_validation import KFold
 
 config_megam('/home/dsbatista/megam_i686.opt')
 
@@ -115,7 +112,8 @@ class MaxentPosTagger(TaggerI):
         if trace > 0:
             print "time to train the classifier: {0}".format(round(t2-t1, 3))
 
-    def gen_feat_freqs(self, featuresets):
+    @staticmethod
+    def gen_feat_freqs(featuresets):
         """
         Generates a frequency distribution of joint features (feature, tag)
         tuples. The frequency distribution will be used by the tagger to
@@ -139,10 +137,11 @@ class MaxentPosTagger(TaggerI):
         features_freqdist = defaultdict(int)
         for (feat_dict, tag) in featuresets:
             for (feature, value) in feat_dict.items():
-                features_freqdist[ ((feature, value), tag) ] += 1
+                features_freqdist[((feature, value), tag)] += 1
         return features_freqdist
 
-    def gen_word_freqs(self, train_sents):
+    @staticmethod
+    def gen_word_freqs(train_sents):
         """
         Generates word frequencies from the training sentences for the feature
         classifier.
@@ -157,8 +156,7 @@ class MaxentPosTagger(TaggerI):
         word_freqdist = FreqDist()
         for tagged_sent in train_sents:
             for (word, _tag) in tagged_sent:
-                #word_freqdist.inc(word)
-				word_freqdist[word] += 1
+                word_freqdist[word] += 1
         return word_freqdist
 
     def gen_featsets(self, train_sents, rare_word_cutoff):
@@ -186,7 +184,6 @@ class MaxentPosTagger(TaggerI):
                     history, rare_word_cutoff), tag) )
                 history.append(tag)
         return featuresets
-
 
     def cutoff_rare_feats(self, featuresets, rare_feat_cutoff):
         """
@@ -245,7 +242,6 @@ class MaxentPosTagger(TaggerI):
                 if self.features_freqdist[feat_value_tag] < rare_feat_cutoff:
                     if feature not in never_cutoff_features:
                         feat_dict.pop(feature)
-
 
     def extract_feats(self, sentence, i, history, rare_word_cutoff=5):
         """
@@ -367,7 +363,6 @@ class MaxentPosTagger(TaggerI):
 
         return features
 
-
     def tag(self, sentence, rare_word_cutoff=5):
         """
         Attaches a part-of-speech tag to each word in a sequence.
@@ -386,8 +381,7 @@ class MaxentPosTagger(TaggerI):
         """
         history = []
         for i in xrange(len(sentence)):
-            featureset = self.extract_feats(sentence, i, history,
-                                               rare_word_cutoff)
+            featureset = self.extract_feats(sentence, i, history, rare_word_cutoff)
             tag = self.classifier.classify(featureset)
             history.append(tag)
         return zip(sentence, history)
@@ -399,7 +393,6 @@ class MaxentPosTagger(TaggerI):
                 return [self.tag(sent) for sent in sentences]
             """
             return [self.tag(sent) for sent in sentences]
-
 
     def evaluate(self, gold):
             """
@@ -419,115 +412,18 @@ class MaxentPosTagger(TaggerI):
             correct_tags = dict()
             total_tags = dict()
 
-            print test_tokens
-
-            for i in range(0,len(test_tokens)):
+            for i in range(0, len(test_tokens)):
                 tag = test_tokens[i][1]
                 if tag in total_tags:
                     total_tags[tag] += 1
-                else: total_tags[tag] = 1
+                else:
+                    total_tags[tag] = 1
 
-                if (gold_tokens[i][1] == test_tokens[i][1]):
+                if gold_tokens[i][1] == test_tokens[i][1]:
                     tag = test_tokens[i][1]
                     if tag in correct_tags:
                         correct_tags[tag] += 1
-                    else: correct_tags[tag] = 1
+                    else:
+                        correct_tags[tag] = 1
 
-            for tag in correct_tags:
-                print tag,':\t'+str(correct_tags[tag]/float(total_tags[tag]))
-
-
-def demo(corpus):
-
-    #TODO:
-    # 1. treinar um modelo com as tags originais do CINTIL
-    # 2. com tags reduzidas mantendo os verbos no passado
-    # para cada modelo, fazer:
-    #   5-fold
-    #   medir accuracy por tag
-
-
-    """
-    Loads a few sentences from the Brown corpus or the Wall Street Journal
-    corpus, trains them, tests the tagger's accuracy and tags an unseen
-    sentence.
-
-    @type corpus: C{str}
-    @param corpus: Name of the corpus to load, either C{brown} or C{treebank}.
-
-    @type num_sents: C{int}
-    @param num_sents: Number of sentences to load from a corpus. Use a small
-    number, as training might take a while.
-
-    if corpus.lower() == "brown":
-        from nltk.corpus import brown
-        tagged_sents = brown.tagged_sents()[:num_sents]
-
-    elif corpus.lower() == "treebank":
-        from nltk.corpus import treebank
-        tagged_sents = treebank.tagged_sents()[:num_sents]
-
-    elif corpus.lower() == "floresta":
-        from nltk.corpus import floresta
-        tagged_sents = floresta.tagged_sents()[:num_sents]
-    """
-    print "Loading CINTIL"
-    #cintil = ConllCorpusReader('/home/dsbatista/cintil/','cintil-fixed.conll',column_types)
-    column_types = ['words', 'pos', 'ignore']
-    column_types = ['words', 'pos', 'ignore']
-    #column_types = ['ignore', 'words', 'ignore', 'ignore', 'pos', 'ignore']
-    directory = "/home/dsbatista/PycharmProjects/minhash-classifier/classifier/postagger/datasets"
-    cintil = ConllCorpusReader(directory, 'cintil-newtags.txt', column_types)
-
-    print len(cintil.tagged_sents())
-
-    """
-    kf = KFold(len(cintil.tagged_sents()), 5)
-
-    fold = 1
-    for train_index, test_index in kf:
-        print "\nFOLD", fold
-        train = []
-        train_label = []
-        test = []
-        test_label = []
-        test_ids = []
-
-        print train_index
-        print test_index
-
-        for index in train_index:
-            train.append(samples_features[index])
-            train_label.append(sample_class[index])
-
-        for index in test_index:
-            test.append(samples_features[index])
-            test_label.append(sample_class[index])
-            test_ids.append(index)
-
-    train_sents, test_sents = tagged_sents[size:], tagged_sents[:size]
-    maxent_tagger = MaxentPosTagger()
-    maxent_tagger.train(train_sents)
-    maxent_tagger.evaluate(test_sents)
-    """
-
-    """
-    print "tagger accuracy (test %i sentences, after training %i):" % \
-        (size, (num_sents - size)), maxent_tagger.evaluate(test_sents)
-    print "\n\n"
-    print "classify unseen sentence: ", maxent_tagger.tag(["Isto", "é", "bastante","rápido", "!"])
-    print "\n\n"
-    print "show the 40 most informative features:"
-    print maxent_tagger.classifier.show_most_informative_features(40)
-    """
-
-    """
-    fModel = open('test.pkl', "wb")
-    pickle.dump(maxent_tagger, fModel,1)
-    fModel.close()
-    """
-
-if __name__ == '__main__':
-    demo("cintil")
-
-
+            return correct_tags, total_tags
