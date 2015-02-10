@@ -35,8 +35,8 @@ class FeatureExtractor:
             between_tokens = re.findall(self.TOKENIZER, rel.between, flags=re.UNICODE)
             after_tokens = re.findall(self.TOKENIZER, rel.after, flags=re.UNICODE)
         except TypeError:
-			print rel.sentence
-			sys.exit(0) 
+            print rel.sentence
+            sys.exit(0)
 
         # conside only a window of size 'tokens_window' tokens
         before_tokens = before_tokens[0 - self.CONTEXT_WINDOW:]
