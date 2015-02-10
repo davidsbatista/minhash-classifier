@@ -86,9 +86,9 @@ PADR	noun
 PL	interjection
 PNM	noun
 PNT	punctuation
-PPA	verb
+PPA	verb_past
 PP	preposition
-PPT	verb
+PPT	verb_past
 PREP	preposition
 PRS	pronoun
 POSS	determiner

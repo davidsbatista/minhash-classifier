@@ -9,7 +9,7 @@ import codecs
 mappings = dict()
 
 
-def loadMappings():
+def load_mappings():
     f_mappings = codecs.open("convert-tageset.txt", encoding='utf-8')
     for line in f_mappings:
         orig,new = line.split('\t')
@@ -18,10 +18,10 @@ def loadMappings():
 
 
 def main():
-    loadMappings()
+    load_mappings()
     f_file = codecs.open(sys.argv[1], encoding='utf-8')
     for line in f_file:
-        if len(line)!=1:
+        if len(line) != 1:
             parts = line.split('\t')
             word = parts[0]
             pos_tag = parts[1].strip()

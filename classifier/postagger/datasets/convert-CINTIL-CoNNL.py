@@ -8,7 +8,8 @@ import fileinput
 import codecs
 import nltk
 
-def loadContraccoes():
+
+def load_contractions():
     global l
     l = ['-lhe_/CL','-lhe_/CL','-lhe_/CL','-lhe_/CL','-me_/CL','-me_/CL','-me_/CL','-te_/CL','-te_/CL','-te_/CL']
     global contraccoes
@@ -24,15 +25,17 @@ def loadContraccoes():
     for line in f_sentences:
         contraccoes_desfeitas.append(line.strip())
 
+
 def main():
-    loadContraccoes()
+    load_contractions()
 
     tags = [u"/CJ", u"/ADV", u"/LADV", u"/LPRS", u"/DGT", u"/LPREP", u"/LITJ", u"/LCJ", u"/DA#", u"/UM#", u"/DEM#", u"/REL#", u"/REL[", u"/REL/", u"/PNM", u"/PADR", u"/PPA#", u"/VAUX#", u"/V#", u"/PPT", u"/INF#", u"/INFAUX#", u"/GER", u"/GERAUX#", u"/CN#", u"/CN", u"/ADJ#", u"/QNT#", u"/QNT/", u"/QNT[", u"/WD#", u"/ORD#", u"/POSS#", u"/DM", u"/CARD#", u"/MTH", u"/PRS", u"STT#", u"IND#", u"/DEM/", u"/ADJ/", u"/ITJ", "/DEM[", u"/EADR[", u"/CL#", u"/DFR", u"/LDFR", u"/INT[", u"/INT/", u"/SYB[", u"/INT#", u"/UNIT#", u"/IA#", u"/IA/", u"/MGT", u"/NP", u"/EXC[", u"/LTR", u"/EOE", u"/LD", u"/PP", u"/IND[", u"/IND/", u"/DL", u"/LREL", u"/EMP[", u"/LQD", u"/PL[", u"/CL/", u"/STT", u"/LCN", u"/EL[", u"/TERMN", u"/SC", u"/V[",u"/VAUX[",u"/INF[",u"/INFAUX[",u"/LADV", u"LCJ1", u"LPREP", u"LPRS1"]
 
     f_sentences = codecs.open(sys.argv[1], encoding='utf-8')
     for line in f_sentences:
         if line.startswith('<p ') or line.startswith('<s '):
-            if (line.startswith('<p ')): print "\n",
+            if line.startswith('<p '):
+                print "\n",
             clean = re.sub('<(s|p)[^>]*>', '', line)
             sentence = clean.strip()
             parts = sentence.split(' ')
@@ -50,7 +53,8 @@ def main():
                     if any(verb in parts[i] for verb in verbs) and parts[i+1].startswith("-") and "/CL" in parts[i+1]:
                         verb = parts[i].split('/')[0]
                         reflexive = parts[i+1].split('/')[0]
-                        if verb.endswith('#'): verb = verb[:-1]
+                        if verb.endswith('#'):
+                            verb = verb[:-1]
 
                         if "-CL-" not in verb:
                             pos = parts[i].split("/")[-1].split("#")[0]
@@ -83,10 +87,12 @@ def main():
 
 
                         # there are a few annotations BUGS/errors, fix them
-                        if tag=='0': tag='O'
+                        if tag == '0':
+                            tag='O'
 
                         # de[I]_/PREP[I-ORG]
-                        if tag=='I]_/PRE': tag='I-ORG'
+                        if tag == 'I]_/PRE':
+                            tag = 'I-ORG'
 
                         try:
                             c = contraccoes.index(contr)
@@ -94,14 +100,12 @@ def main():
                             parts[i] = contr_desf+"/"+tag
                             del parts[i+1]
                         except Exception, e:
-                            print "Error",e
+                            print "Error", e
                             print contr.encode("utf8")
                             sys.exit(0)
 
-        
-
             # print word per line with POS and tag information, CoNNL format
-            ignore = ['<i>','</i>',"<t>","</t>","*//PNT[O]"]
+            ignore = ['<i>', '</i>', "<t>", "</t>", "*//PNT[O]"]
             for p in parts:
                 if p in ignore:
                     continue
@@ -116,14 +120,14 @@ def main():
                 if "/PREP" in p and ("/CN" not in p and "/V" not in p):
                     if "PREP[" in p:
                         try:
-                            word,info = p.split("/")
+                            word, info = p.split("/")
                             pos = "PREP"
                             tag = info[info.find('['):]
                             tag = tag[1:-1]
                             print (word+'\t'+pos+'\t'+tag).encode("utf8")
-                        except:
+                        except Exception, e:
                             print parts
-                            print "t",p
+                            print "t", p
                             sys.exit(0)
 
                     elif "PREP/" in p:
@@ -153,7 +157,8 @@ def main():
                         pos = parts[1]
                         tag = parts[2]
 
-                    if tag=='I-WR': tag= 'I-WRK'
+                    if tag == 'I-WR':
+                        tag = 'I-WRK'
 
                     print (word+'\t'+pos+'\t'+tag).encode("utf8")
 
