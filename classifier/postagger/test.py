@@ -7,33 +7,6 @@ import sys
 
 tokenizer =  r'\w+(?:-\w+)+|\d+(?:[:|/]\d+)+|\d+(?:[.]?[oaºª°])+|\w+\'\w+|\d+(?:[,|.]\d+)*\%?|[\w+\.-]+@[\w\.-]+|https?://[^\s]+|\w+'
 
-# Corpus CINTIL com todas as tags
-
-"""
-determinantes = ['DEM']
-artigos = ['DA','IA','UM']
-verbos = ['V','INF','UM']
-verbos_past = ['PPA','PPT']
-"""
-
-# Reduced tag-set
-"""
-verb
-noun
-determiner
-punctuation
-preposition
-adjective
-conjunction
-adverb
-pronoun
-numeral
-pronoun 
-interjection
-symbol
-electronic
-"""
-
 
 def extract_reverb_patterns(text_tokenized):
     tagged = tagger.tag(text_tokenized)
@@ -77,6 +50,11 @@ def extract_reverb_patterns(text_tokenized):
     print "\n",
 
 
+def process(sentence):
+    tokens = re.findall(tokenizer, sentence.decode("utf8"), flags=re.UNICODE)
+    extract_reverb_patterns(tokens)
+
+
 def main():
     global tagger
     print "Loading PoS tagger\n"
@@ -97,11 +75,6 @@ def main():
     process(sentence4)
     process(sentence5)
     process(sentence6)
-
-
-def process(sentence):
-    tokens = re.findall(tokenizer, sentence.decode("utf8"), flags=re.UNICODE)
-    extract_reverb_patterns(tokens)
 
 
 if __name__ == "__main__":
