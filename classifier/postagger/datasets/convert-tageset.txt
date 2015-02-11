@@ -2,7 +2,7 @@ ADJ	adjective
 ADV	adverb
 CARD	numeral
 CJ	conjunction
-CL	pronoun 
+CL	pronoun
 CN	noun
 DA	determiner
 DEM	determiner
@@ -101,6 +101,6 @@ TT	noun
 TERMN	symbol
 UM	determiner
 UNIT	symbol
-VAUX	verb
+VAUX	verb_aux
 V	verb
 WD	noun
