@@ -3,7 +3,7 @@
 
 __author__ = 'dsbatista'
 
-import pickle
+import cPickle
 from mxpost import MaxentPosTagger
 from nltk.corpus import ConllCorpusReader
 from sklearn.cross_validation import KFold
@@ -54,7 +54,7 @@ def train_k_fold(sentences):
 
         print "Saving generated model"
         f_model = open('pos-tagger_'+str(fold)+'_.pkl', "wb")
-        pickle.dump(maxent_tagger, f_model, 1)
+        cPickle.dump(maxent_tagger, f_model, 1)
         f_model.close()
 
         fold += 1
@@ -68,10 +68,9 @@ def train_all(sentences):
     maxent_tagger = MaxentPosTagger()
     print "Training"
     maxent_tagger.train(sentences)
-
     print "Saving generated model"
     f_model = open('pos-tagger_all_.pkl', "wb")
-    pickle.dump(maxent_tagger, f_model, 1)
+    cPickle.dump(maxent_tagger, f_model, 1)
     f_model.close()
 
 
@@ -82,6 +81,7 @@ def main():
     cintil = ConllCorpusReader(directory, 'CINTIL-CoNNL-reduced-past-verbs.txt', columns)
     #cintil = ConllCorpusReader(directory, 'CINTIL-CoNNL-format.txt', columns)
     sentences = cintil.tagged_sents()
+    sentences = sentences[0:100]
     print len(sentences), " sentences loaded"
     train_all(sentences)
 
